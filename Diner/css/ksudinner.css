@@ -1,0 +1,37 @@
+﻿body {
+    background-color:#eadede;
+}
+
+header {
+        width:80%;
+        background-color:#555555;
+        color:black;
+        padding:5px;
+        display:block;
+        margin:0 auto;
+}
+    
+header h1 {
+        color:white;
+        align-content: center;
+        text-align: center;   
+    }
+
+header h2 {
+        color: #dcdcdc;
+        align-content: center;
+        text-align: center;
+    }
+
+section {
+        width:80%;
+        background-color:#ffc629;
+        color:black;
+        padding:5px;
+        display:block;
+        margin:0 auto;
+    }
+
+footer {
+       text-align:center;
+            }
