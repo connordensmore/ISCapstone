@@ -1,0 +1,42 @@
+﻿body {
+    background-color:cornflowerblue;
+    
+}
+
+header {
+        width:80%;
+        background-color:whitesmoke;
+        color:black;
+        padding:5px;
+        display:block;
+        margin:0 auto;
+}
+    
+header h1 {
+        color:black;
+        align-content: center;
+        text-align: center;
+        height: 70px;
+        width: 516px;
+}
+
+header h2 {
+        color: black;
+        align-content: center;
+        text-align: center;
+        height: 27px;
+}
+
+section {
+        width:80%;
+        background-color:yellow;
+        color:black;
+        padding:5px;
+        display:block;
+        margin:0 auto;
+    }
+
+footer {
+       text-align:center;
+    width: 639px;
+}
