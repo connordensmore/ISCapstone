@@ -40,3 +40,7 @@ footer {
        text-align:center;
     width: 639px;
 }
+
+.button:hover {
+	background-color: #a37e19;
+}

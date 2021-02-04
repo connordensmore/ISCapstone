@@ -1,9 +1,6 @@
 ﻿Partial Class _Default
     Inherits System.Web.UI.Page
 
-    Protected Sub LinkButton1_Click(sender As Object, e As EventArgs) Handles LinkButton1.Click
-        Response.Redirect("http://www.kennesaw.edu")
-    End Sub
     Protected Sub ClearButton_Click(sender As Object, e As EventArgs) Handles ClearButton.Click
         'Clear all the fields on screen
 
@@ -12,7 +9,7 @@
         City.Text = ""
         State.Text = ""
         Phone.Text = ""
-
+        ZipCode.Text = ""
         Quantity.Text = "1"
 
         Products_List.SelectedIndex = "0"
