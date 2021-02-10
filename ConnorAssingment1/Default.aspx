@@ -31,7 +31,7 @@
                         <div class="product">
                             <h3>Chicken & Gnocchi</h3>
                             <br />
-                            <img src="images/cgs.jpg" style="height: 240px; width: 240px" />
+                            <img src="images/cgs.jpg" title="Chicken & Gnocchi" alt="chickengnocchi" style="height: 240px; width: 240px" />
                             <br />
                             <br />
                             <p class="button">$6.99</p>
@@ -41,7 +41,7 @@
                         <div class="product">
                             <h3>Minestrone</h3>
                             <br />
-                            <img src="images/minesoup.jpg" style="height: 240px; width: 240px" />
+                            <img src="images/minesoup.jpg" title="Minestrone" alt="minestrone" style="height: 240px; width: 240px" />
                             <br />
                             <br />
                             <p class="button">$4.99</p>
@@ -51,7 +51,7 @@
                         <div class="product">
                             <h3>Pasta e Fagioli</h3>
                             <br />
-                            <img src="images/Pasta-e-Fagioli-Soup.jpg" style="height: 240px; width: 240px" />
+                            <img src="images/Pasta-e-Fagioli-Soup.jpg" title="Pasta e Fagioli" alt="pastaefagioli" style="height: 240px; width: 240px" />
                             <br />
                             <br />
                             <p class="button">$8.99</p>
@@ -63,7 +63,7 @@
                         <div class="product">
                             <h3>Zuppa Toscana</h3>
                             <br />
-                            <img src="images/ZuppaToscana.jpg" style="height: 240px; width: 240px" />
+                            <img src="images/ZuppaToscana.jpg" title="Zuppa Toscana" alt="zuppatoscana" style="height: 240px; width: 240px" />
                             <br />
                             <br />
                             <p class="button">$9.99</p>
@@ -73,7 +73,7 @@
                         <div class="product">
                             <h3>Chicken Tortilla</h3>
                             <br />
-                            <img src="images/chickentortilla.jpg" style="height: 240px; width: 240px" />
+                            <img src="images/chickentortilla.jpg" title="Chicken Tortilla" alt="chickentortilla" style="height: 240px; width: 240px" />
                             <br />
                             <br />
                             <p class="button">$7.99</p>
@@ -83,7 +83,7 @@
                         <div class="product">
                             <h3>Clam Chowder</h3>
                             <br />
-                            <img src="images/clamchowder.jpg" style="height: 240px; width: 240px" />
+                            <img src="images/clamchowder.jpg" title="Clam Chowder" alt="clamchowder" style="height: 240px; width: 240px" />
                             <br />
                             <br />
                             <p class="button">$10.99</p>
