@@ -1,0 +1,38 @@
+﻿body {background-color:burlywood;
+      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      
+    
+}
+h1 {
+    background-color:#FFFFFF;
+    background-image: url('../Images/mortgage-calculator-logo-lg.png');
+    font-size: 140%;
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    margin: 0;
+    color: #003300;
+    padding-left: 4px;
+    font-family: Trebuchet MS, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+h2 {
+	background-color:yellow;
+	font-size:140%;
+	border-top: 1px solid #cccccc;
+	border-bottom: 1px solid #cccccc;
+	margin:0;
+	color:#003300;
+	padding-left:4px;
+	font-family: Trebuchet MS, Arial, Helvetica, sans-serif;
+	font-weight:normal;
+}
+
+}
+footer {
+	background-color:#CACAAF;
+	border-top: 1px solid #ececcf;
+	border-bottom: 1px solid #a8a88d;
+	width:100%;
+	text-align:center;
+	color:#FFFFFF;
+}
