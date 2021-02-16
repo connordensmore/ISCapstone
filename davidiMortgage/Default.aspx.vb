@@ -28,15 +28,15 @@ Partial Class _Default
 
         'convert values 
         prin = CInt(Principle.Text)
-        int = CInt(Pct_Rate.Text)
+        int = CDbl(Pct_Rate.Text)
         trm = CInt(Terms.Text)
 
 
         'calculate the amounts
         'mthpynt = (prin * int)testing
-        mthpynt = prin * (int / 12) / (1 - (1 + (int / 12) ^ trm))
-        ttlpymnt = prin * int * trm
-        ttlint = (prin * (1 + (int * trm))) - prin
+        mthpynt = prin * (int / 12) / (1 - (1 / (1 + (int / 12)) ^ trm))
+        ttlpymnt = mthpynt * trm
+        ttlint = ttlpymnt - prin
         mthint = int / 12
 
         'put total into label
