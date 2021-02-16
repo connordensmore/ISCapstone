@@ -34,10 +34,11 @@ Partial Class _Default
 
         'calculate the amounts
         'mthpynt = (prin * int)testing
-        mthpynt = prin * (int / 12) / (1 - (1 / (1 + (int / 12)) ^ trm))
+        mthint = (int / 100) / 12
+        mthpynt = prin * mthint / (1 - (1 / (1 + mthint) ^ trm))
         ttlpymnt = mthpynt * trm
         ttlint = ttlpymnt - prin
-        mthint = int / 12
+
 
         'put total into label
         MO_Payment.Text = mthpynt.ToString("c")

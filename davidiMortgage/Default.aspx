@@ -12,7 +12,6 @@
         Annual % Rate:&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:TextBox ID="Pct_Rate" runat="server"></asp:TextBox>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="Pct_Rate" ErrorMessage="*Required" ForeColor="#FF3300"></asp:RequiredFieldValidator>
-        <asp:RangeValidator ID="RangeValidator2" runat="server" ControlToValidate="Pct_Rate" ErrorMessage="* value must be between 0 &amp; 1" ForeColor="#FF3300" MaximumValue="1.0" MinimumValue=".0000000001"></asp:RangeValidator>
     </p>
     <p>
         Loan Terms:&nbsp;&nbsp;&nbsp;&nbsp;
