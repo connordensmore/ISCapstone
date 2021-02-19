@@ -15,8 +15,8 @@
             align-content: center;
         }
         .auto-style9 {
-            width: 528px;
-            height: 673px;
+            width: 462px;
+            height: 616px;
         }
         .auto-style10 {
             color: #FFFFFF;
@@ -30,18 +30,26 @@
             color: #FFFFFF;
         }
         .auto-style12 {
-            height: 623px;
+            height: 610px;
         }
         .auto-style13 {
             margin-left: auto;
             margin-right: auto;
             display: block;
             padding: 0;
-            height: 623px;
+            height: 610px;
         }
         .auto-style16 {
-            width: 85%;
+            width: 73%;
             margin: 0px auto;
+        }
+        .auto-style17 {
+            height: 142px;
+            width: 1004px;
+        }
+        .auto-style18 {
+            height: 610px;
+            width: 73%;
         }
     </style>
 </head>
@@ -54,7 +62,7 @@
     <div>
         <table style="width: 100%; height: 827px; margin-bottom: 0px;">
             <tr>
-                <td class="auto-style12">&nbsp;<h1 class="auto-style10">QUICK LINKS </h1>
+                <td class="auto-style18">&nbsp;<h1 class="auto-style10">QUICK LINKS </h1>
                     &nbsp;&nbsp;&nbsp;
                     <br>
                     
@@ -103,9 +111,12 @@
 
     </div>
     </form>
-    
-</body>
-    
-</html>
-<div class="footer"> <img src="images/footer.jpg" />
+   
+    <div class="footer"> <img src="images/footer.jpg" class="auto-style17" />
    </div>
+
+</body>
+   
+
+</html>
+
