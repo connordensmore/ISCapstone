@@ -1,4 +1,6 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="Default2.aspx.vb" Inherits="Default2" %>
+﻿
+
+<%@ Page Language="VB" AutoEventWireup="false" CodeFile="Default2.aspx.vb" Inherits="Default2" %>
 
 <!DOCTYPE html>
 
@@ -7,11 +9,6 @@
     <title></title>
     <link href="css/StyleSheet.css" rel="stylesheet" />
     <style type="text/css">
-        .auto-style2 {
-            text-align: center;
-            height: 170px;
-            width: 1444px;
-        }
         .auto-style3 {
             text-align: center;
             color: #FFFFFF;
@@ -21,7 +18,8 @@
             height: 422px;
         }
         .auto-style5 {
-            width: 1436px;
+            
+            width: 535px;
             height: 191px;
         }
         .auto-style6 {
@@ -29,22 +27,42 @@
             height: 71px;
             float: right;
         }
+        .auto-style8 {
+            width: 20%;
+            color:#000000;
+        }
+        .auto-style11 {
+            height: 168px;
+            width: 541px;
+        }
+        .auto-style12 {
+            width: 119%;
+        }
         </style>
 </head>
 <body>
     <form id="form1" runat="server">
     <div>
-        <a class="imagecenter"><img src="images/WebBanner.jpg" class="auto-style2" /></a>
+        <div class="container">
+        <a class="imagecenter"><img src="images/WebBanner.jpg" class="auto-style11" /><!--class="auto-style2" class="auto-style10"--> </a>
+        </div>        
     </div>
         <div class="container">
         <div class="container">
+            <table id="statement"><tr>
+                <td>We are what we repeatedly do. Excellence, then, is not an act, but a habit. ~ Aristotle</td> 
+                
+                </tr>
+            </table> 
+                
         <table id="navcol" class="textcenter" style="width: 100%;">
+            
             <tr class="nav">
-                <td><a href="">::HOME</a></td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
+                <td class="auto-style8"><a href="">:HOME</a></td>
+                <td class="auto-style8"><a href="">:ORGANIZATION</a></td>
+                <td class="auto-style8"><a href="">:PRODUCTS/SERVICES</td>
+                <td class="auto-style8"><a href="">:PROGRAM INFO</td>
+                <td class="auto-style8"><a href="">PI&amp;C RESOURCES</td>
             </tr>
         </table>
         <table id="links" style="width: 100%;">
@@ -56,36 +74,39 @@
             </tr>
             <tr>
                 <td><a href="">> PI&C Plan</a></td>
-                <td></td>
+                <td>
+                    <br />
+                    <a href="">&gt; PI&amp;C Plan</a><br />
+                </td>
             </tr>
             <tr>
                 <td><a href="">> Herc/Comm. Report</a></td>
+                <td><a href="">&gt; PI&amp;C Plan</a></td>
+            </tr>
+            <tr>
+                <td><a href="">> C-130 Program Letters</a></td>
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
+                <td><a href="">> Engineering Metrics</a></td>
+                <td><a href="">&gt; PI&amp;C Plan</a></td>
             </tr>
             <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td>&nbsp;</td>
+                <td><a href="">> AMMM Home Page</a></td>
                 <td rowspan="3" class="textcenter">&nbsp;</td>
             </tr>
             <tr>
-                <td></td>
+                <td><a href="">> PLanning Core Page</a></td>
             </tr>
             <tr>
-                <td>&nbsp;</td>
+                <td><a href="">> EV Navigator</a></td>
             </tr>
             <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
+                <td><a href="">> CAM Information</a></td>
+                <!--<td class="auto-style12"></td>-->
             </tr>
             <tr>
-                <td>&nbsp;</td>
+                <td><a href="">> PI&C Sharepoint Site</a></td>
                 <td>&nbsp;</td>
             </tr>
         </table>
@@ -96,11 +117,18 @@
                         <img alt="lock" class="auto-style6" longdesc="lock" src="images/LM_logo.jpg" /></td>
                 </tr>
                 </table>
+               
+            <table id="footer" class="auto-style12">        
+                 <tr>   <td>
+                        <img alt="lock" class="auto-style5" longdesc="footer" src="images/footer.jpg" /></td>
+                </tr>
+             </table>
+
             </div>
     </div>
-            <div>
-        &nbsp;<img alt="footer" class="auto-style5" longdesc="footer" src="images/footer.jpg" /></div>
-       
+            <!--<div>
+        &nbsp;<img alt="footer" class="auto-style5" longdesc="footer" src="images/footer.jpg" /></div>-->
+
     </form>
 </body>
 </html>

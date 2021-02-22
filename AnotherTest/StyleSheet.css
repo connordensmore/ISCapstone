@@ -1,0 +1,59 @@
+body {
+    background-color: #002348;
+    color: white;
+}
+a {
+    color: white;
+}
+.container {
+    width: 85%;
+    margin: 0px auto;
+}
+
+.imagecenter {
+	height: 170px;
+    width: 85%;
+    margin: 0px auto;
+    /*margin-left: auto;
+	margin-right: auto;*/
+	display: block;
+}
+.textcenter {
+    text-align: center;
+}
+
+.nav {
+    background-color: lightgray;
+}
+.nav a {
+    color:#000000;
+    font-weight: bold;
+    text-decoration: none;
+}
+    .nav a:hover {
+        color: red;
+        text-decoration: underline;
+    }
+
+#navcol tr td {
+    height: 40px;
+    width: 20%;
+}
+#links tr td {
+    width: 33%;
+}
+
+#under tr td {
+    width: 50%;
+    height: 40px;
+}
+#statement tr td {
+    text-align: right;
+    width: 536px;
+    background-color: #000000;
+    color: #FFFFFF;
+}
+#footer tr td {
+    width: 100%;
+    height: 40px;
+}  
