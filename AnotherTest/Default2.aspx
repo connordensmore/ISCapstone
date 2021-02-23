@@ -19,8 +19,8 @@
         }
         .auto-style5 {
             
-            width: 535px;
-            height: 191px;
+            width: 762px;
+            height: 118px;
         }
         .auto-style6 {
             width: 324px;
@@ -31,23 +31,27 @@
             width: 20%;
             color:#000000;
         }
-        .auto-style11 {
-            height: 168px;
-            width: 541px;
-        }
         .auto-style12 {
             width: 119%;
+        }
+        .auto-style13 {
+            width: 762px;
+            height: 111px;
+            margin-right: 0px;
         }
         </style>
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
+    <!--<div>
+        class="auto-style11" />class="auto-style2" class="auto-style10" 
+        
+    </div>-->
         <div class="container">
-        <a class="imagecenter"><img src="images/WebBanner.jpg" class="auto-style11" /><!--class="auto-style2" class="auto-style10"--> </a>
-        </div>        
-    </div>
         <div class="container">
+        <a class="imagecenter"><img src="images/WebBanner.jpg" </a class="auto-style13">        
+
+        </div>
         <div class="container">
             <table id="statement"><tr>
                 <td>We are what we repeatedly do. Excellence, then, is not an act, but a habit. ~ Aristotle</td> 
@@ -62,7 +66,7 @@
                 <td class="auto-style8"><a href="">:ORGANIZATION</a></td>
                 <td class="auto-style8"><a href="">:PRODUCTS/SERVICES</td>
                 <td class="auto-style8"><a href="">:PROGRAM INFO</td>
-                <td class="auto-style8"><a href="">PI&amp;C RESOURCES</td>
+                <td class="auto-style8"><a href="">:RESOURCES</td>
             </tr>
         </table>
         <table id="links" style="width: 100%;">
@@ -73,15 +77,15 @@
                 <td class="auto-style3">LOCKHEED MARTIN LINKS</td>
             </tr>
             <tr>
-                <td><a href="">> PI&C Plan</a></td>
+                <td><a href="">>The Greatest Plan</a></td>
                 <td>
                     <br />
-                    <a href="">&gt; PI&amp;C Plan</a><br />
+                    <a href="">&gt; My Favorite Link</a><br />
                 </td>
             </tr>
             <tr>
                 <td><a href="">> Herc/Comm. Report</a></td>
-                <td><a href="">&gt; PI&amp;C Plan</a></td>
+                <td><a href="">&gt; Cowboys</a></td>
             </tr>
             <tr>
                 <td><a href="">> C-130 Program Letters</a></td>
@@ -89,7 +93,7 @@
             </tr>
             <tr>
                 <td><a href="">> Engineering Metrics</a></td>
-                <td><a href="">&gt; PI&amp;C Plan</a></td>
+                <td><a href="">&gt; Race Cars</a></td>
             </tr>
             <tr>
                 <td><a href="">> AMMM Home Page</a></td>
@@ -125,6 +129,7 @@
              </table>
 
             </div>
+
     </div>
             <!--<div>
         &nbsp;<img alt="footer" class="auto-style5" longdesc="footer" src="images/footer.jpg" /></div>-->

@@ -4,6 +4,7 @@ body {
 }
 a {
     color: white;
+    
 }
 .container {
     width: 85%;
@@ -11,7 +12,7 @@ a {
 }
 
 .imagecenter {
-	height: 170px;
+	 /*height: 70px;*/
     width: 85%;
     margin: 0px auto;
     /*margin-left: auto;
@@ -48,8 +49,8 @@ a {
     height: 40px;
 }
 #statement tr td {
-    text-align: right;
-    width: 536px;
+    text-align: center;
+    width: 762px;
     background-color: #000000;
     color: #FFFFFF;
 }
