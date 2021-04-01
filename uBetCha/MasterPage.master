@@ -1,0 +1,41 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>UBetChA</title>
+    <link href="css/StyleSheet.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="fixed-header">
+        <div class="container">
+		<a href="Default.aspx" class="logo"><img src="images/logoheader.png" /></a>
+            <nav>
+                <a class="active" href="Default.aspx">Home</a>
+                <a href="mortgage-news.aspx">Mortgage News</a>
+                <a href="reverse-mortgage.aspx">Reverse Mortgage</a>
+   		    </nav>
+		</div>
+        </div>
+        <div class="container">
+            <div class="container">
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+            
+            </asp:ContentPlaceHolder>
+        </div>
+        </div>
+        <div class="fixed-footer">
+        <div class="container">
+          <p class="textcenter"><a href="Default.aspx">Home</a> | <a href="mortgage-news.aspx">Mortgage News</a> | <a href="reverse-mortgage.aspx">Reverse Mortgage</a></p>
+		  <div class="textcenter" id="copyright">
+              <pre>Copyright ©2021 Mortgageify</pre>
+            </div>
+        </div>
+  	    </div>
+    </form>
+</body>
+</html>
