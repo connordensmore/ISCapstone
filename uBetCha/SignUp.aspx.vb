@@ -4,7 +4,7 @@ Imports System.Data.SqlClient
 Imports System.Net
 Imports System.Net.Mail
 
-Partial Class Default2
+Partial Class SignUp
     Inherits System.Web.UI.Page
 
     Protected Sub CreateUserWizard1_CreatedUser(sender As Object, e As EventArgs) Handles CreateUserWizard1.CreatedUser

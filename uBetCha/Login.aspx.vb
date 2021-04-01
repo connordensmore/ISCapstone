@@ -15,13 +15,12 @@ Partial Class Login
             End If
         End If
     End Sub
-    Protected Sub Login1_Authenticate(sender As Object, e As AuthenticateEventArgs)
-Handles Login1.Authenticate
-' Initialize FormsAuthentication, for what it's worth
-    FormsAuthentication.Initialize()
+    Protected Sub Login1_Authenticate(sender As Object, e As AuthenticateEventArgs) Handles Login1.Authenticate
+        ' Initialize FormsAuthentication, for what it's worth
+        FormsAuthentication.Initialize()
         Dim userId As Integer = 0
         Dim roles As String = String.Empty
-        Dim con As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDBFilename=|DataDirectory|\Database.mdf;Integrated Security=True")
+        Dim con As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database.mdf;Integrated Security=True")
         Using cmd As New SqlCommand("Validate_User")
             cmd.CommandType = CommandType.StoredProcedure
             cmd.Parameters.AddWithValue("@Username", Login1.UserName)
