@@ -1,0 +1,146 @@
+﻿<%@ Master Language="VB" CodeFile="balloonmainMasterPage2.master.vb" Inherits="balloonmainMasterPage2" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+       <title>Balloon Festivals Inc.</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+
+
+  <!-- Bootstrap core CSS -->
+  
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  
+    <link href="css/scrolling-nav.css" rel="stylesheet" />
+    <style>
+        .bg-image-full {
+            background: no-repeat center center scroll;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            background-size: cover;
+            -o-background-size: cover;
+        }
+
+    </style>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    
+      <div class="container">
+      
+          <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="images/b2transparent.png" height="75" width="50" padding="1px" />Balloon Festivals Inc.</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="Default.aspx">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="Balloons.aspx">Balloons</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="Pilots.aspx">Pilots</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="Events.aspx">Events</a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="Reports.aspx">Reports</a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="Reviews.aspx">Reviews</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+ <header style="background-image:url(images/b2_12bigg.jpg); " >
+    <div class="container text-center" >
+      <h1>Welcome to Balloon Festivals Inc.</h1>
+      <p class="lead" style ="font-weight:bold">Soar to new adventures!</p>
+    </div>
+  </header>
+        
+        <section id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+              </asp:ContentPlaceHolder>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+    <section id="Events" class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server"></asp:ContentPlaceHolder>
+
+
+          </div>
+      </div>
+    </div></section>
+      </div>
+  
+
+  <section id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Contact Us </h2>
+          <p class="lead">Balloon Festivals Inc.</p>
+            <p class="lead">1000 Chastain Road</p>
+            <p class="lead">Kennesaw, GA 30144</p>
+            <p class="lead">470.458.7777 or email
+                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="mailto:balloons@kennesaw.edu">Balloons Inc.</asp:HyperLink>
+            </p>
+            <p class="lead">Contact us with questions.&nbsp; We are ready to start your adventure event now.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Balloon Festivals Inc. 2020</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom JavaScript for this theme -->
+  <script src="js/scrolling-nav.js"></script>
+
+
+    <div>
+    
+    </div>
+    </form>
+</body>
+</html>
