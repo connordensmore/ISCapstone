@@ -2,7 +2,7 @@
 html {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-body {   
+body {
     margin: 0px;
     color: #000000;
 }
@@ -53,7 +53,7 @@ nav a.active {
 		text-decoration: none;	
 	}
     .fixed-header {
-        border-bottom: solid 3px #333;
+        border-bottom: solid 2px #333;
     }
 .fixed-footer p {
 	color: #ffffff;
@@ -127,8 +127,15 @@ nav {
 	width: 45%;
 	margin: 1%;
 }
+.banner {
+    background-position: center center;
+    background-size: cover;
+    color: #ffffff;
+    padding: 14em 0em 14em;
+    text-align: center;
+}
 .button {
-    background-color: #20B865;
+    background-color: #46CDCF;
     border-radius: 30px;
     border: 0;
     color: #ffffff !important;
@@ -190,4 +197,11 @@ td {
 .bottompad {
     margin-bottom: 150px;
 }
+.alignright {
+    float: right;
+    text-align: right;
+}
+.login:hover {
+    color: #46CDCF;
+    cursor: pointer;
 }
