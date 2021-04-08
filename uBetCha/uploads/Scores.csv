@@ -1,0 +1,169 @@
+GameId,Date,StartTime,Visitor,VPTS,Home,HPTS
+1,"Apr 1, 2021",3:30p,Minnesota Timberwolves,106,Los Angeles Clippers,118
+2,"Apr 1, 2021",7:00p,New York Knicks,92,Indiana Pacers,85
+3,"Apr 1, 2021",7:00p,Miami Heat,102,Orlando Magic,89
+4,"Apr 1, 2021",8:00p,Golden State Warriors,131,Cleveland Cavaliers,112
+5,"Apr 1, 2021",8:00p,Brooklyn Nets,107,Washington Wizards,113
+6,"Apr 1, 2021",8:30p,Philadelphia 76ers,95,Boston Celtics,116
+7,"Apr 1, 2021",8:30p,Atlanta Hawks,100,Dallas Mavericks,123
+8,"Apr 1, 2021",9:00p,Charlotte Hornets,90,San Antonio Spurs,114
+9,"Apr 1, 2021",10:00p,Los Angeles Lakers,129,Sacramento Kings,113
+10,"Apr 1, 2021",10:30p,Utah Jazz,107,Portland Trail Blazers,124
+11,"Apr 2, 2021",12:30p,Denver Nuggets,123,Detroit Pistons,128
+12,"Apr 2, 2021",2:00p,New Orleans Pelicans,109,Houston Rockets,117
+13,"Apr 2, 2021",2:00p,Phoenix Suns,108,Milwaukee Bucks,129
+14,"Apr 2, 2021",3:00p,Chicago Bulls,102,Toronto Raptors,129
+15,"Apr 3, 2021",7:00p,Orlando Magic,112,Charlotte Hornets,100
+16,"Apr 3, 2021",7:00p,New York Knicks,139,Cleveland Cavaliers,134
+17,"Apr 3, 2021",7:00p,Dallas Mavericks,112,Indiana Pacers,103
+18,"Apr 3, 2021",7:00p,Golden State Warriors,125,Washington Wizards,117
+19,"Apr 3, 2021",7:30p,Boston Celtics,123,Atlanta Hawks,115
+20,"Apr 3, 2021",7:30p,Phoenix Suns,97,Brooklyn Nets,119
+21,"Apr 3, 2021",7:30p,Philadelphia 76ers,106,Miami Heat,137
+22,"Apr 3, 2021",8:00p,Detroit Pistons,82,Memphis Grizzlies,96
+23,"Apr 3, 2021",10:00p,Minnesota Timberwolves,109,Sacramento Kings,113
+24,"Apr 3, 2021",10:30p,San Antonio Spurs,105,Los Angeles Clippers,108
+25,"Apr 4, 2021",7:30p,Milwaukee Bucks,120,New Orleans Pelicans,108
+26,"Apr 4, 2021",8:00p,Charlotte Hornets,110,Houston Rockets,125
+27,"Apr 4, 2021",9:00p,Portland Trail Blazers,99,Denver Nuggets,127
+28,"Apr 4, 2021",10:00p,San Antonio Spurs,102,Los Angeles Lakers,129
+29,"Apr 5, 2021",7:00p,Phoenix Suns,108,Detroit Pistons,116
+30,"Apr 5, 2021",7:30p,Orlando Magic,100,Boston Celtics,116
+31,"Apr 5, 2021",7:30p,Golden State Warriors,88,Brooklyn Nets,129
+32,"Apr 5, 2021",7:30p,Indiana Pacers,118,Toronto Raptors,119
+33,"Apr 5, 2021",8:00p,Atlanta Hawks,127,Minnesota Timberwolves,120
+34,"Apr 5, 2021",8:00p,Cleveland Cavaliers,103,Oklahoma City Thunder,109
+35,"Apr 5, 2021",8:30p,Memphis Grizzlies,121,Dallas Mavericks,107
+36,"Apr 5, 2021",9:00p,Denver Nuggets,98,Utah Jazz,95
+37,"Apr 5, 2021",10:00p,Miami Heat,111,Los Angeles Clippers,128
+38,"Apr 6, 2021",7:30p,Orlando Magic,103,New York Knicks,105
+39,"Apr 6, 2021",8:00p,New Orleans Pelicans,125,Chicago Bulls,119
+40,"Apr 6, 2021",8:00p,Philadelphia 76ers,101,Milwaukee Bucks,112
+41,"Apr 6, 2021",10:00p,San Antonio Spurs,117,Portland Trail Blazers,125
+42,"Apr 6, 2021",10:30p,Houston Rockets,121,Los Angeles Lakers,111
+43,"Apr 7, 2021",7:00p,Memphis Grizzlies,107,Philadelphia 76ers,119
+44,"Apr 7, 2021",7:00p,Dallas Mavericks,118,Washington Wizards,119
+45,"Apr 7, 2021",7:30p,Atlanta Hawks,107,Boston Celtics,112
+46,"Apr 7, 2021",8:00p,Toronto Raptors,115,Indiana Pacers,106
+47,"Apr 7, 2021",8:00p,Detroit Pistons,101,Oklahoma City Thunder,108
+48,"Apr 7, 2021",9:00p,Houston Rockets,91,Phoenix Suns,127
+49,"Apr 7, 2021",10:00p,Miami Heat,97,Sacramento Kings,105
+50,"Apr 7, 2021",10:30p,Portland Trail Blazers,114,Utah Jazz,117
+51,"Apr 8, 2021",5:00p,Milwaukee Bucks,111,Orlando Magic,95
+52,"Apr 8, 2021",7:00p,Dallas Mavericks,116,Charlotte Hornets,100
+53,"Apr 8, 2021",7:00p,New York Knicks,95,Detroit Pistons,92
+54,"Apr 8, 2021",7:30p,New Orleans Pelicans,124,Indiana Pacers,117
+55,"Apr 8, 2021",7:30p,Brooklyn Nets,118,Toronto Raptors,119
+56,"Apr 8, 2021",8:00p,Los Angeles Clippers,115,Minnesota Timberwolves,142
+57,"Apr 8, 2021",8:30p,Los Angeles Lakers,125,Golden State Warriors,120
+58,"Apr 8, 2021",9:00p,Denver Nuggets,117,Phoenix Suns,108
+59,"Apr 8, 2021",10:00p,San Antonio Spurs,102,Sacramento Kings,122
+60,"Apr 9, 2021",3:30p,Boston Celtics,112,Oklahoma City Thunder,111
+61,"Apr 9, 2021",6:00p,New York Knicks,135,Atlanta Hawks,140
+62,"Apr 9, 2021",6:00p,Chicago Bulls,111,Philadelphia 76ers,118
+63,"Apr 9, 2021",6:00p,Memphis Grizzlies,106,Washington Wizards,99
+64,"Apr 9, 2021",7:00p,Utah Jazz,114,Houston Rockets,113
+65,"Apr 9, 2021",7:30p,Los Angeles Clippers,133,Cleveland Cavaliers,92
+66,"Apr 9, 2021",9:00p,Miami Heat,109,Portland Trail Blazers,115
+67,"Apr 10, 2021",7:00p,Charlotte Hornets,87,Detroit Pistons,76
+68,"Apr 10, 2021",7:00p,Brooklyn Nets,106,Indiana Pacers,105
+69,"Apr 10, 2021",7:00p,Atlanta Hawks,126,Orlando Magic,135
+70,"Apr 10, 2021",7:30p,Minnesota Timberwolves,126,Toronto Raptors,137
+71,"Apr 10, 2021",8:00p,Sacramento Kings,111,Milwaukee Bucks,123
+72,"Apr 10, 2021",8:30p,Utah Jazz,123,Dallas Mavericks,119
+73,"Apr 10, 2021",9:00p,San Antonio Spurs,120,Denver Nuggets,127
+74,"Apr 10, 2021",10:30p,Miami Heat,113,Golden State Warriors,101
+75,"Apr 10, 2021",10:30p,Phoenix Suns,100,Los Angeles Lakers,125
+76,"Apr 11, 2021",7:00p,Los Angeles Clippers,103,Philadelphia 76ers,110
+77,"Apr 11, 2021",7:00p,Chicago Bulls,114,Washington Wizards,126
+78,"Apr 11, 2021",8:00p,Portland Trail Blazers,117,New Orleans Pelicans,138
+79,"Apr 11, 2021",8:00p,San Antonio Spurs,114,Oklahoma City Thunder,106
+80,"Apr 11, 2021",9:30p,Boston Celtics,105,Houston Rockets,116
+81,"Apr 12, 2021",7:00p,Atlanta Hawks,105,Cleveland Cavaliers,127
+82,"Apr 12, 2021",7:00p,Detroit Pistons,112,Orlando Magic,116
+83,"Apr 12, 2021",7:30p,Toronto Raptors,91,Brooklyn Nets,101
+84,"Apr 12, 2021",7:30p,Milwaukee Bucks,111,Indiana Pacers,118
+85,"Apr 12, 2021",7:30p,Washington Wizards,114,New York Knicks,96
+86,"Apr 12, 2021",8:00p,Portland Trail Blazers,104,Memphis Grizzlies,111
+87,"Apr 12, 2021",8:00p,Charlotte Hornets,115,Minnesota Timberwolves,108
+88,"Apr 12, 2021",8:30p,Sacramento Kings,111,Dallas Mavericks,130
+89,"Apr 12, 2021",9:00p,Golden State Warriors,106,Phoenix Suns,112
+90,"Apr 12, 2021",9:00p,Miami Heat,101,Utah Jazz,116
+91,"Apr 12, 2021",10:00p,Los Angeles Lakers,120,Denver Nuggets,116
+92,"Apr 13, 2021",8:00p,Los Angeles Clippers,133,Boston Celtics,141
+93,"Apr 13, 2021",8:00p,Oklahoma City Thunder,123,New Orleans Pelicans,118
+94,"Apr 20, 2021",7:00p,Milwaukee Bucks,126,Detroit Pistons,106
+95,"Apr 20, 2021",7:30p,Miami Heat,124,Atlanta Hawks,129
+96,"Apr 20, 2021",8:00p,Charlotte Hornets,103,Chicago Bulls,93
+97,"Apr 20, 2021",8:00p,Brooklyn Nets,104,Philadelphia 76ers,112
+98,"Apr 20, 2021",10:00p,Memphis Grizzlies,125,Sacramento Kings,129
+99,"Apr 20, 2021",10:30p,Houston Rockets,135,Golden State Warriors,105
+100,"Apr 21, 2021",7:00p,Dallas Mavericks,122,Orlando Magic,106
+101,"Apr 21, 2021",7:00p,Cleveland Cavaliers,113,Washington Wizards,108
+102,"Apr 21, 2021",7:30p,Indiana Pacers,106,New York Knicks,98
+103,"Apr 21, 2021",7:30p,Phoenix Suns,101,Toronto Raptors,118
+104,"Apr 21, 2021",8:00p,Boston Celtics,127,Minnesota Timberwolves,117
+105,"Apr 21, 2021",8:00p,Denver Nuggets,101,Oklahoma City Thunder,113
+106,"Apr 21, 2021",9:00p,San Antonio Spurs,113,Utah Jazz,104
+107,"Apr 21, 2021",10:30p,Memphis Grizzlies,105,Los Angeles Lakers,117
+108,"Apr 21, 2021",10:30p,New Orleans Pelicans,128,Portland Trail Blazers,115
+109,"Apr 22, 2021",3:30p,Sacramento Kings,112,Los Angeles Clippers,103
+110,"Apr 22, 2021",7:00p,Brooklyn Nets,115,Charlotte Hornets,86
+111,"Apr 22, 2021",7:30p,Dallas Mavericks,107,Atlanta Hawks,111
+112,"Apr 22, 2021",8:00p,Phoenix Suns,112,Chicago Bulls,104
+113,"Apr 22, 2021",8:00p,Cleveland Cavaliers,105,Miami Heat,124
+114,"Apr 22, 2021",8:30p,Philadelphia 76ers,98,Milwaukee Bucks,119
+115,"Apr 22, 2021",9:00p,Houston Rockets,120,Utah Jazz,110
+116,"Apr 23, 2021",3:30p,Boston Celtics,112,Los Angeles Lakers,114
+117,"Apr 23, 2021",6:00p,Minnesota Timberwolves,116,Denver Nuggets,128
+118,"Apr 23, 2021",6:00p,Indiana Pacers,81,Toronto Raptors,127
+119,"Apr 23, 2021",7:00p,Washington Wizards,117,Chicago Bulls,126
+120,"Apr 23, 2021",7:00p,San Antonio Spurs,103,Oklahoma City Thunder,131
+121,"Apr 23, 2021",8:30p,New Orleans Pelicans,115,Golden State Warriors,101
+122,"Apr 23, 2021",9:00p,Detroit Pistons,104,Portland Trail Blazers,107
+123,"Apr 24, 2021",7:00p,Miami Heat,119,Cleveland Cavaliers,125
+124,"Apr 24, 2021",7:00p,Atlanta Hawks,112,Philadelphia 76ers,129
+125,"Apr 24, 2021",7:00p,Milwaukee Bucks,137,Washington Wizards,134
+126,"Apr 24, 2021",7:30p,Orlando Magic,115,Brooklyn Nets,113
+127,"Apr 24, 2021",8:00p,New York Knicks,112,Houston Rockets,123
+128,"Apr 24, 2021",8:30p,Minnesota Timberwolves,123,Dallas Mavericks,139
+129,"Apr 24, 2021",9:00p,Phoenix Suns,131,Utah Jazz,111
+130,"Apr 24, 2021",10:30p,Memphis Grizzlies,97,Los Angeles Clippers,124
+131,"Apr 25, 2021",7:00p,Charlotte Hornets,80,Indiana Pacers,119
+132,"Apr 25, 2021",7:30p,Milwaukee Bucks,108,Toronto Raptors,97
+133,"Apr 25, 2021",8:00p,Oklahoma City Thunder,124,Chicago Bulls,122
+134,"Apr 25, 2021",9:00p,Detroit Pistons,98,Denver Nuggets,115
+135,"Apr 25, 2021",10:00p,New Orleans Pelicans,109,Los Angeles Lakers,118
+136,"Apr 25, 2021",10:00p,Boston Celtics,118,Portland Trail Blazers,106
+137,"Apr 25, 2021",10:30p,Sacramento Kings,112,Golden State Warriors,94
+138,"Apr 26, 2021",7:00p,New York Knicks,101,Charlotte Hornets,107
+139,"Apr 26, 2021",7:00p,Philadelphia 76ers,94,Cleveland Cavaliers,108
+140,"Apr 26, 2021",7:00p,Brooklyn Nets,106,Washington Wizards,110
+141,"Apr 26, 2021",7:30p,Orlando Magic,130,Atlanta Hawks,120
+142,"Apr 26, 2021",7:30p,Minnesota Timberwolves,129,Miami Heat,126
+143,"Apr 26, 2021",8:00p,Memphis Grizzlies,112,Houston Rockets,140
+144,"Apr 26, 2021",8:30p,Dallas Mavericks,109,San Antonio Spurs,103
+145,"Apr 26, 2021",9:00p,Los Angeles Clippers,102,Phoenix Suns,92
+146,"Apr 26, 2021",10:30p,Boston Celtics,114,Utah Jazz,103
+147,"Apr 27, 2021",7:00p,New York Knicks,106,Philadelphia 76ers,115
+148,"Apr 27, 2021",8:00p,Portland Trail Blazers,100,Indiana Pacers,106
+149,"Apr 27, 2021",8:00p,Sacramento Kings,108,Oklahoma City Thunder,112
+150,"Apr 27, 2021",10:30p,Los Angeles Lakers,116,Golden State Warriors,86
+151,"Apr 28, 2021",7:00p,Minnesota Timberwolves,125,Orlando Magic,136
+152,"Apr 28, 2021",7:30p,Brooklyn Nets,118,Atlanta Hawks,141
+153,"Apr 28, 2021",7:30p,Charlotte Hornets,99,Toronto Raptors,96
+154,"Apr 28, 2021",8:00p,Sacramento Kings,104,Memphis Grizzlies,101
+155,"Apr 28, 2021",8:00p,Dallas Mavericks,118,Miami Heat,126
+156,"Apr 28, 2021",8:00p,Oklahoma City Thunder,86,Milwaukee Bucks,133
+157,"Apr 28, 2021",8:00p,Cleveland Cavaliers,104,New Orleans Pelicans,116
+158,"Apr 28, 2021",9:00p,Detroit Pistons,113,Phoenix Suns,111
+159,"Apr 28, 2021",9:00p,Washington Wizards,119,Utah Jazz,129
+160,"Apr 28, 2021",10:30p,Denver Nuggets,103,Los Angeles Clippers,132
+161,"Apr 29, 2021",5:00p,Chicago Bulls,115,New York Knicks,125
+162,"Apr 29, 2021",7:30p,Portland Trail Blazers,117,Atlanta Hawks,129
+163,"Apr 29, 2021",7:30p,Brooklyn Nets,113,Miami Heat,116
+164,"Apr 29, 2021",8:00p,Indiana Pacers,113,Cleveland Cavaliers,104
+165,"Apr 29, 2021",8:00p,Los Angeles Lakers,88,Memphis Grizzlies,105
+166,"Apr 29, 2021",8:30p,Houston Rockets,111,Boston Celtics,110
+167,"Apr 29, 2021",8:30p,Orlando Magic,113,San Antonio Spurs,114
+168,"Apr 29, 2021",9:00p,Golden State Warriors,115,Phoenix Suns,99
