@@ -1,6 +1,11 @@
 ﻿<%@ Page Title="" Language="VB" MasterPageFile="~/MasterPage.master" AutoEventWireup="false" CodeFile="Login.aspx.vb" Inherits="Login" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <style type="text/css">
+        .auto-style1 {
+            height: 30px;
+        }
+    </style>
     </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <asp:Login ID="Login1" runat="server">
@@ -43,6 +48,11 @@
                             <tr>
                                 <td align="right" colspan="2">
                                     <asp:Button ID="LoginButton" runat="server" CommandName="Login" Text="Log In" ValidationGroup="Login1" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right" class="auto-style1" colspan="2">
+                                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/register.aspx">Register</asp:HyperLink>
                                 </td>
                             </tr>
                         </table>

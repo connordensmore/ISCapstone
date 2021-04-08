@@ -15,23 +15,20 @@
         <div class="fixed-header">
         <div class="container">
 		<a href="Default.aspx" class="logo"><img src="images/logoheader.png" /></a>
-            <span class="alignright"><a class="login"><i class="fas fa-user"></i> Login</a></span>
+            <span class="alignright"><a href="Login.aspx" class="login"><i class="fas fa-user"></i> Login</a></span>
             <nav>
                 <a class="active" href="Default.aspx">Home</a>
+                <a href="Teams.aspx">Teams</a>
                 <a href="upcoming-games.aspx">Upcoming Games</a>
                 <a href="betting.aspx">Betting</a>
                 <a href="how-to-bet.aspx">How To Bet</a>
    		    </nav>
 		</div>
         </div>
-        <div class="container">
-            <div class="container">
 
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 </asp:ContentPlaceHolder>
 
-        </div>
-        </div>
         <div class="fixed-footer">
         <div class="container">
           <p class="textcenter"><a href="Default.aspx">Home</a> | <a href="upcoming-games.aspx">Upcoming Games</a> | <a href="betting.aspx">Betting</a> | <a href="how-to-bet.aspx">How To Bet</a></p>
