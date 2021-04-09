@@ -53,8 +53,8 @@ Partial Class Register
         Using mm As New MailMessage("ubetcha2021ksu@gmail.com", tbemail.Text)
             mm.Subject = "UBetCha Account Activation"
             Dim body As String = "Hello " + tbusername.Text.Trim() + ","
-            body += "<br /><br />Thank you for choosing What WEAR When. Our goal is to make selecting "
-            body += "your outfit for any occasion as stress free as possible."
+            body += "<br /><br />Thank you for registering at UBetCha."
+            body += "Go get betting!."
             body += "<br />Please click the link below to activate your account."
             body += "<br />For security purposes the link will expire in 24 hours."
             body += "<br /><br />Thank you and welcome!"
@@ -68,9 +68,9 @@ Partial Class Register
             Dim NetworkCred As New System.Net.NetworkCredential()
             NetworkCred.UserName = "ubetcha2021ksu@gmail.com"
             NetworkCred.Password = "BcJ4cYT8TJSJ"
-            smtp.UseDefaultCredentials = True
+            smtp.UseDefaultCredentials = False
             smtp.Credentials = NetworkCred
-            smtp.Port = 465
+            smtp.Port = 587
             smtp.Send(mm)
         End Using
     End Sub
