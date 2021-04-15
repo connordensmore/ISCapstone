@@ -8,7 +8,6 @@ body {
 }
 p {
 	font-size: 22px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .container{
     width: 85%;
@@ -34,7 +33,7 @@ nav a.active {
 		padding-top: 10px;
         left: 0;
         bottom: 0;
-        position: fixed;
+        position: relative;
         background-color: #333;
 	}
 	.fixed-footer a {
@@ -203,4 +202,50 @@ td {
 .login:hover {
     color: #46CDCF;
     cursor: pointer;
+}
+#banner {
+    background-image: url('../images/front.png');
+    background-position: center center;
+    background-size: cover;
+    color: #ffffff;
+    padding: 14em 0em 14em;
+    text-align: center;
+}
+#banner h2 {
+    color: #ffffff;
+    font-size: 4em;
+    line-height: 1.25em;
+    margin: 0 0 0.5em 0;
+    padding: 0;
+}
+#banner p {
+    font-size: 1.75em;
+    margin-bottom: 1.75em;
+	color: #FFFFFF;
+}
+#banner a {
+	color: #FFFFFF;
+}
+#banner a:hover {
+	text-decoration: none;
+}
+.major{
+	text-align: center;
+}
+.major h2 {
+	font-size: 3em;
+    margin-bottom: 0.5em;
+}
+.major h3 {
+	font-size: 2.25em;
+}
+.major h4 {
+	font-size: 2em
+}
+.major p {
+	font-size: 1.60em;
+}
+.major ul li {
+	font-size: 1.25em;
+	margin-top: 0px;
 }

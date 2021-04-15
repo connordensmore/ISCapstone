@@ -8,6 +8,7 @@
 </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <div class="container">
     <br />
 <table style="width:100%;">
     <tr>
@@ -41,5 +42,6 @@
         </td>
     </tr>
 </table>
+</div>
 </asp:Content>
 
