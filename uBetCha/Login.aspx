@@ -1,21 +1,20 @@
 ﻿<%@ Page Title="" Language="VB" MasterPageFile="~/MasterPage.master" AutoEventWireup="false" CodeFile="Login.aspx.vb" Inherits="Login" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-    <style type="text/css">
-        .auto-style1 {
-            height: 30px;
-        }
-    </style>
     </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <asp:Login ID="Login1" runat="server">
+    <div class="container">
+        <br />
+    <asp:Login ID="Login1" runat="server" align="center" CssClass="logintable">
         <LayoutTemplate>
             <table cellpadding="1" cellspacing="0" style="border-collapse:collapse;">
                 <tr>
                     <td>
                         <table cellpadding="0">
                             <tr>
-                                <td align="center" colspan="2">Log In</td>
+                                <td align="center" colspan="2">
+                                    <h2>Log In</h2>
+                                </td>
                             </tr>
                             <tr>
                                 <td align="right">
@@ -31,7 +30,7 @@
                                     <asp:Label ID="PasswordLabel" runat="server" AssociatedControlID="Password">Password:</asp:Label>
                                 </td>
                                 <td>
-                                    <asp:TextBox ID="Password" runat="server" Height="19px" TextMode="Password"></asp:TextBox>
+                                    <asp:TextBox ID="Password" runat="server" TextMode="Password"></asp:TextBox>
                                     <asp:RequiredFieldValidator ID="PasswordRequired" runat="server" ControlToValidate="Password" ErrorMessage="Password is required." ToolTip="Password is required." ValidationGroup="Login1">*</asp:RequiredFieldValidator>
                                 </td>
                             </tr>
@@ -47,12 +46,12 @@
                             </tr>
                             <tr>
                                 <td align="right" colspan="2">
-                                    <asp:Button ID="LoginButton" runat="server" CommandName="Login" Text="Log In" ValidationGroup="Login1" />
+                                    <asp:Button ID="LoginButton" runat="server" CommandName="Login" CssClass="button" Text="Log In" ValidationGroup="Login1" />
                                 </td>
                             </tr>
                             <tr>
-                                <td align="right" class="auto-style1" colspan="2">
-                                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/register.aspx">Register</asp:HyperLink>
+                                <td align="right" colspan="2">
+                                    <asp:Button ID="Button1" runat="server" CssClass="button" OnClick="Button1_Click" Text="Register" />
                                 </td>
                             </tr>
                         </table>
@@ -61,5 +60,7 @@
             </table>
         </LayoutTemplate>
     </asp:Login>
+        <br />
+    </div>
 </asp:Content>
 

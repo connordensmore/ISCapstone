@@ -7,18 +7,12 @@
         
         <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" DataSourceID="ObjectDataSource1" DataTextField="teamname" DataValueField="teamname">
         </asp:DropDownList>
-        <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" DeleteMethod="Delete" InsertMethod="Insert" OldValuesParameterFormatString="original_{0}" SelectMethod="GetDataTeamName" TypeName="DataSetTableAdapters.TeamsTableAdapter" UpdateMethod="Update">
-            <DeleteParameters>
-                <asp:Parameter Name="Original_teamid" Type="Int32" />
-            </DeleteParameters>
+        <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" InsertMethod="Insert" OldValuesParameterFormatString="original_{0}" SelectMethod="GetDataTeamName" TypeName="DataSetTableAdapters.TeamsTableAdapter">
             <InsertParameters>
                 <asp:Parameter Name="teamname" Type="String" />
             </InsertParameters>
-            <UpdateParameters>
-                <asp:Parameter Name="teamname" Type="String" />
-                <asp:Parameter Name="Original_teamid" Type="Int32" />
-            </UpdateParameters>
         </asp:ObjectDataSource>
+        <br />
         <br />
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="GameId" DataSourceID="ObjectDataSource2" Width="822px">
             <Columns>

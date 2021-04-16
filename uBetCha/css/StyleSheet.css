@@ -33,7 +33,7 @@ nav a.active {
 		padding-top: 10px;
         left: 0;
         bottom: 0;
-        position: relative;
+        position: absolute;
         background-color: #333;
 	}
 	.fixed-footer a {
@@ -121,13 +121,6 @@ nav {
 	width: 45%;
 	margin: 1%;
 }
-.banner {
-    background-position: center center;
-    background-size: cover;
-    color: #ffffff;
-    padding: 14em 0em 14em;
-    text-align: center;
-}
 .button {
     background-color: #46CDCF;
     border-radius: 30px;
@@ -142,9 +135,10 @@ nav {
     text-decoration: none;
     font-size: 1.3em;
     margin-top: 10px;
+    vertical-align: middle;
 }
 .button:hover {
-	background-color: #116E3B;
+	background-color: #38A4A5;
 }
 .major{
 	text-align: center;
@@ -248,4 +242,14 @@ td {
 .major ul li {
 	font-size: 1.25em;
 	margin-top: 0px;
+}
+.registertable, .logintable{
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    background-color: #E2FEFF;
+    border-color: #FFDFAD;
+    padding: 4px;
+    border: solid;
+    border-width: 1px;
 }

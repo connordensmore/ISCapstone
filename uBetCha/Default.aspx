@@ -10,7 +10,7 @@
 				Rated #1 Practice Betting Site</h2>
 				<p class="subtitle">Register Your Account Today!</br>
 				<a href="Register.aspx">Register</a></br></br>
-                <asp:Label ID="lblwelcome" runat="server" Text=""></asp:Label></p>
+                <asp:Label ID="lblwelcome" runat="server" Text=""></asp:Label>&nbsp;</p>
 			</div>
 		</div>
 	</div>

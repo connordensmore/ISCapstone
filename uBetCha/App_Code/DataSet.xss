@@ -13,18 +13,6 @@
     <Shape ID="DesignTable:Teams" ZOrder="1" X="763" Y="428" Height="115" Width="182" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="64" />
   </Shapes>
   <Connectors>
-    <Connector ID="DesignRelation:Users_Bet" ZOrder="4" LineWidth="11">
-      <RoutePoints>
-        <Point>
-          <X>537</X>
-          <Y>199</Y>
-        </Point>
-        <Point>
-          <X>412</X>
-          <Y>199</Y>
-        </Point>
-      </RoutePoints>
-    </Connector>
     <Connector ID="DesignRelation:Users_MemberCurrency" ZOrder="3" LineWidth="11">
       <RoutePoints>
         <Point>
@@ -34,6 +22,18 @@
         <Point>
           <X>912</X>
           <Y>244</Y>
+        </Point>
+      </RoutePoints>
+    </Connector>
+    <Connector ID="DesignRelation:Users_Bet" ZOrder="4" LineWidth="11">
+      <RoutePoints>
+        <Point>
+          <X>537</X>
+          <Y>199</Y>
+        </Point>
+        <Point>
+          <X>412</X>
+          <Y>199</Y>
         </Point>
       </RoutePoints>
     </Connector>

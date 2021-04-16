@@ -8,7 +8,7 @@ Partial Class Login
         If Not Me.IsPostBack Then
             If Me.Page.User.Identity.IsAuthenticated Then
                 FormsAuthentication.SignOut()
-                Response.Redirect("~/MyAccount.aspx")
+                Response.Redirect("~/Default.aspx")
             Else
                 Session.Abandon()
                 Session.Clear()
@@ -41,18 +41,18 @@ Partial Class Login
                 Login1.FailureText = "Account has not been activated."
                 Exit Select
             Case Else
-                Dim ticket As New FormsAuthenticationTicket(1, Login1.UserName,
-               DateTime.Now, DateTime.Now.AddMinutes(2880), Login1.RememberMeSet, roles,
-                FormsAuthentication.FormsCookiePath)
+                Dim ticket As New FormsAuthenticationTicket(1, Login1.UserName, DateTime.Now, DateTime.Now.AddMinutes(2880), Login1.RememberMeSet, roles, FormsAuthentication.FormsCookiePath)
                 Dim hash As String = FormsAuthentication.Encrypt(ticket)
                 Dim cookie As New HttpCookie(FormsAuthentication.FormsCookieName, hash)
                 If ticket.IsPersistent Then
                     cookie.Expires = ticket.Expiration
                 End If
                 Response.Cookies.Add(cookie)
-                Response.Redirect(FormsAuthentication.GetRedirectUrl(Login1.UserName,
-                Login1.RememberMeSet))
+                Response.Redirect(FormsAuthentication.GetRedirectUrl(Login1.UserName, Login1.RememberMeSet))
                 Exit Select
         End Select
+    End Sub
+    Protected Sub Button1_Click(sender As Object, e As EventArgs)
+        Response.Redirect("~/Register.aspx")
     End Sub
 End Class
