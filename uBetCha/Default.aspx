@@ -6,12 +6,12 @@
     <div id="banner">
 		<div class="container" id="main">
 			<div class="major">
-				<h2>uBetCha | Practice Your Bets<br>
+				<h2>uBetCha | Practice Your Bets</br>
 				Rated #1 Practice Betting Site</h2>
-				<p class="subtitle">Register Your Account Today!<br>
-				<a href="Register.aspx">Register</a></p>
+				<p class="subtitle">Register Your Account Today!</br>
+				<a href="Register.aspx">Register</a></br></br>
+                <asp:Label ID="lblwelcome" runat="server" Text=""></asp:Label></p>
 			</div>
 		</div>
 	</div>
 </asp:Content>
-

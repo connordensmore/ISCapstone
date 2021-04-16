@@ -8,7 +8,7 @@ Partial Class Login
         If Not Me.IsPostBack Then
             If Me.Page.User.Identity.IsAuthenticated Then
                 FormsAuthentication.SignOut()
-                Response.Redirect("~/Login.aspx")
+                Response.Redirect("~/MyAccount.aspx")
             Else
                 Session.Abandon()
                 Session.Clear()
