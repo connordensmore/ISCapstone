@@ -5,8 +5,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>UBetChA</title>
-    <link href="css/StyleSheet.css" rel="stylesheet" />
-    <link rel="icon" type="image/png" href="images/logo.png"/>
+    <link href="/css/StyleSheet.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="/images/logo.png"/>
     <script src="https://kit.fontawesome.com/c2ffede26f.js" crossorigin="anonymous"></script>
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -15,15 +15,15 @@
     <form id="form1" runat="server">
         <div class="fixed-header">
         <div class="container">
-		<a href="Default.aspx" class="logo"><img src="images/logoheader.png" /></a>
+		<a href="Default.aspx" class="logo"><img src="/images/logoheader.png" /></a>
             <span class="alignright"><a href="Login.aspx" class="login"><i class="fas fa-user"></i> Login</a></span>
             <nav>
-                <a class="active" href="Default.aspx">Home</a>
-                <a href="Teams.aspx">Teams</a>
-                <a href="upcoming-games.aspx">Upcoming Games</a>
-                <a href="betting.aspx">Betting</a>
-                <a href="how-to-bet.aspx">How To Bet</a>
-                <a href="MemberPages/MyAccount.aspx">MyAccount</a>
+                <a href="/Default.aspx">Home</a>
+                <a href="/Teams.aspx">Teams</a>
+                <a href="/upcoming-games.aspx">Upcoming Games</a>
+                <a href="/betting.aspx">Betting</a>
+                <a href="/how-to-bet.aspx">How To Bet</a>
+                <a href="/MemberPages/MyAccount.aspx">MyAccount</a>
    		    </nav>
 		</div>
         </div>

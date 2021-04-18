@@ -17,11 +17,6 @@ p {
     width: 85%;
     margin: 15px auto;
 }
-nav a.active {
-	color: #46CDCF;
-	text-decoration: none;
-	padding: 7px 15px;
-}
 .fixed-header, .fixed-footer{
 	width: 100%;
     background: #FFFFFF;
@@ -33,7 +28,7 @@ nav a.active {
 		padding-top: 10px;
         left: 0;
         bottom: 0;
-        position: absolute;
+        position: relative;
         background-color: #333;
 	}
 	.fixed-footer a {
@@ -84,6 +79,9 @@ nav {
 .center {
   margin-left: auto;
   margin-right: auto
+}
+datacenter {
+    align-content: center;
 }
 .textcenter {
 	text-align: center;
