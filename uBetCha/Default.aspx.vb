@@ -10,7 +10,8 @@ Partial Class _Default
             lblwelcome.Text = "Hello " + Context.User.Identity.Name
 
         Else
-            lblwelcome.Text = "Hello Guest"
+
+            lblwelcome.Text = "Hello Guest | Register Your Account Now! "
 
         End If
     End Sub

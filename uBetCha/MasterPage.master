@@ -16,7 +16,7 @@
         <div class="fixed-header">
         <div class="container">
 		<a href="Default.aspx" class="logo"><img src="/images/logoheader.png" /></a>
-            <span class="alignright"><a href="Login.aspx" class="login"><i class="fas fa-user"></i> Login</a></span>
+            <div class="alignright"><h5><i class="fas fa-user"></i> <asp:LoginStatus ID="LoginStatus1" runat="server" CssClass="login" /></h5></div>
             <nav>
                 <a href="/Default.aspx">Home</a>
                 <a href="/Teams.aspx">Teams</a>
