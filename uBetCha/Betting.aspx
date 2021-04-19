@@ -3,49 +3,46 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <div class="title"><h1>Betting</h1></div>
+
     <div class="container">
-        
-        <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" DataSourceID="ObjectDataSource1" DataTextField="teamname" DataValueField="teamname">
+        <br />
+        <div class="textcenter">
+            <p>Filter by the team you want to bet on. Then find your game and press place bet!
+        <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" DataSourceID="ObjectDataSource1" DataTextField="teamname" DataValueField="teamname" Font-Bold="True" Height="33px" Width="204px" ForeColor="#46CDCF">
         </asp:DropDownList>
+            </p>
+            <br />
         <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" InsertMethod="Insert" OldValuesParameterFormatString="original_{0}" SelectMethod="GetDataTeamName" TypeName="DataSetTableAdapters.TeamsTableAdapter">
             <InsertParameters>
                 <asp:Parameter Name="teamname" Type="String" />
             </InsertParameters>
         </asp:ObjectDataSource>
-        <br />
-        <br />
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="GameId" DataSourceID="ObjectDataSource2" Width="822px">
+        </div>
+        <asp:GridView ID="GridView1" runat="server" Width="1040px" CellPadding="10" CssClass="textcenter" Align="center" AutoGenerateColumns="False" DataKeyNames="GameId" DataSourceID="ObjectDataSource2">
             <Columns>
-                <asp:BoundField DataField="GameId" HeaderText="GameId" ReadOnly="True" SortExpression="GameId" />
-                <asp:BoundField DataField="Date" HeaderText="Date" SortExpression="Date" />
-                <asp:BoundField DataField="StartTime" HeaderText="StartTime" SortExpression="StartTime" />
-                <asp:BoundField DataField="Visitor" HeaderText="Visitor" SortExpression="Visitor" />
-                <asp:BoundField DataField="Home" HeaderText="Home" SortExpression="Home" />
+                <asp:CommandField SelectText="Place Bet" ShowSelectButton="True" />
+                <asp:BoundField DataField="GameId" HeaderText="GameId" SortExpression="GameId" ReadOnly="True" Visible="False" />
+                <asp:BoundField DataField="Date" HeaderText="Date of Game" SortExpression="Date" DataFormatString="{0:d}" />
+                <asp:BoundField DataField="StartTime" HeaderText="Start Time" SortExpression="StartTime" />
+                <asp:BoundField DataField="Visitor" HeaderText="Visitor Team" SortExpression="Visitor" />
+                <asp:BoundField DataField="Home" HeaderText="Home Team" SortExpression="Home" />
             </Columns>
         </asp:GridView>
-        <asp:ObjectDataSource ID="ObjectDataSource2" runat="server" DeleteMethod="Delete" OldValuesParameterFormatString="original_{0}" SelectMethod="GetDataShowGames" TypeName="DataSetTableAdapters.GamesTableAdapter" UpdateMethod="Update">
-            <DeleteParameters>
-                <asp:Parameter Name="Original_GameId" Type="Int32" />
-            </DeleteParameters>
+        <asp:ObjectDataSource ID="ObjectDataSource2" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="GetDataShowGames" TypeName="DataSetTableAdapters.GamesTableAdapter">
             <SelectParameters>
                 <asp:ControlParameter ControlID="DropDownList1" Name="teamname" PropertyName="SelectedValue" Type="String" />
             </SelectParameters>
-            <UpdateParameters>
-                <asp:Parameter Name="Date" Type="DateTime" />
-                <asp:Parameter Name="StartTime" Type="String" />
-                <asp:Parameter Name="Visitor" Type="String" />
-                <asp:Parameter Name="Home" Type="String" />
-                <asp:Parameter Name="Original_GameId" Type="Int32" />
-            </UpdateParameters>
         </asp:ObjectDataSource>
+        <br />
+        <br />
         <br />
         <hr />
         <h1 class="textcenter">
             <br />
             Place Your Bets!</h1>
         <p class="textleft">
-            Game ID
-            <asp:TextBox ID="tbgameid" runat="server"></asp:TextBox>
+            <asp:Label ID="lblgid" runat="server"></asp:Label>
         </p>
         <p class="textleft">
             Bet Amount

@@ -245,9 +245,17 @@ td {
     text-align: center;
     align-content: center;
     align-items: center;
+    vertical-align: middle;
     background-color: #E2FEFF;
     border-color: #FFDFAD;
     padding: 4px;
     border: solid;
     border-width: 1px;
+    margin-bottom: 380px;
+}
+.title {
+    height: 60px;
+    background-color: #dddddd;
+    padding: 10px 250px 25px;
+    vertical-align: top;
 }

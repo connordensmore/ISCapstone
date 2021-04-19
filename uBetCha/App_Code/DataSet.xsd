@@ -227,6 +227,27 @@ FROM            Teams</CommandText>
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="UpcomingGamesTableAdapter" GeneratorDataComponentClassName="UpcomingGamesTableAdapter" Name="UpcomingGames" UserDataComponentName="UpcomingGamesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="UBetChaDB (Web.config)" DbObjectName="dbo.Scores" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillUpcomingGames" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetDataUpcomingGames" GeneratorSourceName="FillUpcomingGames" GetMethodModifier="Public" GetMethodName="GetDataUpcomingGames" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetDataUpcomingGames" UserSourceName="FillUpcomingGames">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Date, StartTime, Visitor, Home
+FROM            Scores
+WHERE        (Date &gt;= { fn CURDATE() })</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Date" DataSetColumn="Date" />
+              <Mapping SourceColumn="StartTime" DataSetColumn="StartTime" />
+              <Mapping SourceColumn="Visitor" DataSetColumn="Visitor" />
+              <Mapping SourceColumn="Home" DataSetColumn="Home" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -235,7 +256,7 @@ FROM            Teams</CommandText>
   <xs:element name="DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="DataSet" msprop:Generator_UserDSName="DataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Users" msprop:Generator_TableClassName="UsersDataTable" msprop:Generator_TableVarName="tableUsers" msprop:Generator_RowChangedName="UsersRowChanged" msprop:Generator_TablePropName="Users" msprop:Generator_RowDeletingName="UsersRowDeleting" msprop:Generator_RowChangingName="UsersRowChanging" msprop:Generator_RowEvHandlerName="UsersRowChangeEventHandler" msprop:Generator_RowDeletedName="UsersRowDeleted" msprop:Generator_RowClassName="UsersRow" msprop:Generator_UserTableName="Users" msprop:Generator_RowEvArgName="UsersRowChangeEvent">
+        <xs:element name="Users" msprop:Generator_TableClassName="UsersDataTable" msprop:Generator_TableVarName="tableUsers" msprop:Generator_TablePropName="Users" msprop:Generator_RowDeletingName="UsersRowDeleting" msprop:Generator_RowChangingName="UsersRowChanging" msprop:Generator_RowEvHandlerName="UsersRowChangeEventHandler" msprop:Generator_RowDeletedName="UsersRowDeleted" msprop:Generator_UserTableName="Users" msprop:Generator_RowChangedName="UsersRowChanged" msprop:Generator_RowEvArgName="UsersRowChangeEvent" msprop:Generator_RowClassName="UsersRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="UserId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnUserId" msprop:Generator_ColumnPropNameInRow="UserId" msprop:Generator_ColumnPropNameInTable="UserIdColumn" msprop:Generator_UserColumnName="UserId" type="xs:int" />
@@ -264,7 +285,7 @@ FROM            Teams</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="MemberCurrency" msprop:Generator_TableClassName="MemberCurrencyDataTable" msprop:Generator_TableVarName="tableMemberCurrency" msprop:Generator_RowChangedName="MemberCurrencyRowChanged" msprop:Generator_TablePropName="MemberCurrency" msprop:Generator_RowDeletingName="MemberCurrencyRowDeleting" msprop:Generator_RowChangingName="MemberCurrencyRowChanging" msprop:Generator_RowEvHandlerName="MemberCurrencyRowChangeEventHandler" msprop:Generator_RowDeletedName="MemberCurrencyRowDeleted" msprop:Generator_RowClassName="MemberCurrencyRow" msprop:Generator_UserTableName="MemberCurrency" msprop:Generator_RowEvArgName="MemberCurrencyRowChangeEvent">
+        <xs:element name="MemberCurrency" msprop:Generator_TableClassName="MemberCurrencyDataTable" msprop:Generator_TableVarName="tableMemberCurrency" msprop:Generator_TablePropName="MemberCurrency" msprop:Generator_RowDeletingName="MemberCurrencyRowDeleting" msprop:Generator_RowChangingName="MemberCurrencyRowChanging" msprop:Generator_RowEvHandlerName="MemberCurrencyRowChangeEventHandler" msprop:Generator_RowDeletedName="MemberCurrencyRowDeleted" msprop:Generator_UserTableName="MemberCurrency" msprop:Generator_RowChangedName="MemberCurrencyRowChanged" msprop:Generator_RowEvArgName="MemberCurrencyRowChangeEvent" msprop:Generator_RowClassName="MemberCurrencyRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="UserId" msprop:Generator_ColumnVarNameInTable="columnUserId" msprop:Generator_ColumnPropNameInRow="UserId" msprop:Generator_ColumnPropNameInTable="UserIdColumn" msprop:Generator_UserColumnName="UserId" type="xs:int" />
@@ -272,7 +293,7 @@ FROM            Teams</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Bet" msprop:Generator_TableClassName="BetDataTable" msprop:Generator_TableVarName="tableBet" msprop:Generator_RowChangedName="BetRowChanged" msprop:Generator_TablePropName="Bet" msprop:Generator_RowDeletingName="BetRowDeleting" msprop:Generator_RowChangingName="BetRowChanging" msprop:Generator_RowEvHandlerName="BetRowChangeEventHandler" msprop:Generator_RowDeletedName="BetRowDeleted" msprop:Generator_RowClassName="BetRow" msprop:Generator_UserTableName="Bet" msprop:Generator_RowEvArgName="BetRowChangeEvent">
+        <xs:element name="Bet" msprop:Generator_TableClassName="BetDataTable" msprop:Generator_TableVarName="tableBet" msprop:Generator_TablePropName="Bet" msprop:Generator_RowDeletingName="BetRowDeleting" msprop:Generator_RowChangingName="BetRowChanging" msprop:Generator_RowEvHandlerName="BetRowChangeEventHandler" msprop:Generator_RowDeletedName="BetRowDeleted" msprop:Generator_UserTableName="Bet" msprop:Generator_RowChangedName="BetRowChanged" msprop:Generator_RowEvArgName="BetRowChangeEvent" msprop:Generator_RowClassName="BetRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="BetId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnBetId" msprop:Generator_ColumnPropNameInRow="BetId" msprop:Generator_ColumnPropNameInTable="BetIdColumn" msprop:Generator_UserColumnName="BetId" type="xs:int" />
@@ -284,7 +305,7 @@ FROM            Teams</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Games" msprop:Generator_TableClassName="GamesDataTable" msprop:Generator_TableVarName="tableGames" msprop:Generator_RowChangedName="GamesRowChanged" msprop:Generator_TablePropName="Games" msprop:Generator_RowDeletingName="GamesRowDeleting" msprop:Generator_RowChangingName="GamesRowChanging" msprop:Generator_RowEvHandlerName="GamesRowChangeEventHandler" msprop:Generator_RowDeletedName="GamesRowDeleted" msprop:Generator_RowClassName="GamesRow" msprop:Generator_UserTableName="Games" msprop:Generator_RowEvArgName="GamesRowChangeEvent">
+        <xs:element name="Games" msprop:Generator_TableClassName="GamesDataTable" msprop:Generator_TableVarName="tableGames" msprop:Generator_TablePropName="Games" msprop:Generator_RowDeletingName="GamesRowDeleting" msprop:Generator_RowChangingName="GamesRowChanging" msprop:Generator_RowEvHandlerName="GamesRowChangeEventHandler" msprop:Generator_RowDeletedName="GamesRowDeleted" msprop:Generator_UserTableName="Games" msprop:Generator_RowChangedName="GamesRowChanged" msprop:Generator_RowEvArgName="GamesRowChangeEvent" msprop:Generator_RowClassName="GamesRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="GameId" msprop:Generator_ColumnVarNameInTable="columnGameId" msprop:Generator_ColumnPropNameInRow="GameId" msprop:Generator_ColumnPropNameInTable="GameIdColumn" msprop:Generator_UserColumnName="GameId" type="xs:int" />
@@ -313,13 +334,41 @@ FROM            Teams</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Teams" msprop:Generator_TableClassName="TeamsDataTable" msprop:Generator_TableVarName="tableTeams" msprop:Generator_RowChangedName="TeamsRowChanged" msprop:Generator_TablePropName="Teams" msprop:Generator_RowDeletingName="TeamsRowDeleting" msprop:Generator_RowChangingName="TeamsRowChanging" msprop:Generator_RowEvHandlerName="TeamsRowChangeEventHandler" msprop:Generator_RowDeletedName="TeamsRowDeleted" msprop:Generator_RowClassName="TeamsRow" msprop:Generator_UserTableName="Teams" msprop:Generator_RowEvArgName="TeamsRowChangeEvent">
+        <xs:element name="Teams" msprop:Generator_TableClassName="TeamsDataTable" msprop:Generator_TableVarName="tableTeams" msprop:Generator_TablePropName="Teams" msprop:Generator_RowDeletingName="TeamsRowDeleting" msprop:Generator_RowChangingName="TeamsRowChanging" msprop:Generator_RowEvHandlerName="TeamsRowChangeEventHandler" msprop:Generator_RowDeletedName="TeamsRowDeleted" msprop:Generator_UserTableName="Teams" msprop:Generator_RowChangedName="TeamsRowChanged" msprop:Generator_RowEvArgName="TeamsRowChangeEvent" msprop:Generator_RowClassName="TeamsRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="teamname" msprop:Generator_ColumnVarNameInTable="columnteamname" msprop:Generator_ColumnPropNameInRow="teamname" msprop:Generator_ColumnPropNameInTable="teamnameColumn" msprop:Generator_UserColumnName="teamname" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="UpcomingGames" msprop:Generator_TableClassName="UpcomingGamesDataTable" msprop:Generator_TableVarName="tableUpcomingGames" msprop:Generator_TablePropName="UpcomingGames" msprop:Generator_RowDeletingName="UpcomingGamesRowDeleting" msprop:Generator_RowChangingName="UpcomingGamesRowChanging" msprop:Generator_RowEvHandlerName="UpcomingGamesRowChangeEventHandler" msprop:Generator_RowDeletedName="UpcomingGamesRowDeleted" msprop:Generator_UserTableName="UpcomingGames" msprop:Generator_RowChangedName="UpcomingGamesRowChanged" msprop:Generator_RowEvArgName="UpcomingGamesRowChangeEvent" msprop:Generator_RowClassName="UpcomingGamesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Date" msprop:Generator_ColumnVarNameInTable="columnDate" msprop:Generator_ColumnPropNameInRow="Date" msprop:Generator_ColumnPropNameInTable="DateColumn" msprop:Generator_UserColumnName="Date" type="xs:dateTime" />
+              <xs:element name="StartTime" msprop:Generator_ColumnVarNameInTable="columnStartTime" msprop:Generator_ColumnPropNameInRow="StartTime" msprop:Generator_ColumnPropNameInTable="StartTimeColumn" msprop:Generator_UserColumnName="StartTime">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Visitor" msprop:Generator_ColumnVarNameInTable="columnVisitor" msprop:Generator_ColumnPropNameInRow="Visitor" msprop:Generator_ColumnPropNameInTable="VisitorColumn" msprop:Generator_UserColumnName="Visitor">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="22" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Home" msprop:Generator_ColumnVarNameInTable="columnHome" msprop:Generator_ColumnPropNameInRow="Home" msprop:Generator_ColumnPropNameInTable="HomeColumn" msprop:Generator_UserColumnName="Home">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="22" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>

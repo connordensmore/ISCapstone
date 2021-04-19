@@ -3,12 +3,13 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" runat="server" contentplaceholderid="ContentPlaceHolder1">
+    <div class="title"><h1>Teams</h1></div>
 
     <div class="container">
         <div class="center">
 
             <br />
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" Width="1040px" Align="center" AllowSorting="True">
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" Width="1040px" CellPadding="10" CssClass="textcenter" Align="center" AllowSorting="True">
                 <Columns>
                     <asp:BoundField DataField="teamname" HeaderText="Team Name" SortExpression="teamname" />
                     <asp:BoundField DataField="teamlocation" HeaderText="Team Location" SortExpression="teamlocation" />
