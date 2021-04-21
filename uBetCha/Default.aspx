@@ -11,6 +11,8 @@
 				<p class="subtitle">Register Your Account Today!</br>
 				<a href="Register.aspx">Register</a></br></br>
                 <asp:Label ID="lblwelcome" runat="server" Text=""></asp:Label>&nbsp;</p>
+                <p class="subtitle">&nbsp;</p>
+                <p class="subtitle">&nbsp;</p>
 
 			</div>
 		</div>

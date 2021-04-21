@@ -1,5 +1,7 @@
 ﻿<%@ Page Title="" Language="VB" MasterPageFile="~/MasterPage.master" AutoEventWireup="false" CodeFile="Admin.aspx.vb" Inherits="Admin" %>
 
+<%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
@@ -19,8 +21,7 @@
             </asp:GridView>
             <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:UBetChaDB %>" SelectCommand="SELECT [UserId], [Username], [RoleId] FROM [Users]"></asp:SqlDataSource>
         </p>
-        <p>Users <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="Username" DataValueField="Username" Height="30px" Width="100px"></asp:DropDownList>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:UBetChaDB %>" SelectCommand="SELECT [Username] FROM [Users]"></asp:SqlDataSource>
+        <p>Users 
             &nbsp;&nbsp;&nbsp; Roles 
             <asp:DropDownList ID="DropDownList2" runat="server" Height="30px" Width="100px">
                 <asp:ListItem Value="1">Member</asp:ListItem>
@@ -31,6 +32,43 @@
         &nbsp;&nbsp;&nbsp;
             <asp:Label ID="lblupdate" runat="server"></asp:Label>
         </p>
+        <hr />
+        <p>Bet Completition: 0 = Not Completed; 1 = Completed</p>
+        <p>Bet Team: 1 = Home; 2 = Visitor</p>
+
+        <rsweb:ReportViewer ID="ReportViewer1" runat="server" Font-Names="Verdana" Font-Size="8pt" Height="517px" WaitMessageFont-Names="Verdana" WaitMessageFont-Size="14pt" Width="1298px">
+            <LocalReport ReportPath="AdminPages\BettingReport.rdlc">
+                <DataSources>
+                    <rsweb:ReportDataSource DataSourceId="ObjectDataSource1" Name="DataSet1" />
+                </DataSources>
+            </LocalReport>
+        </rsweb:ReportViewer>
+        <br />
+        <br />
+        <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" DeleteMethod="Delete" InsertMethod="Insert" OldValuesParameterFormatString="original_{0}" SelectMethod="GetDataBets" TypeName="DataSetTableAdapters.ReportBetTableAdapter" UpdateMethod="Update">
+            <DeleteParameters>
+                <asp:Parameter Name="Original_BetId" Type="Int32" />
+            </DeleteParameters>
+            <InsertParameters>
+                <asp:Parameter Name="BetDate" Type="DateTime" />
+                <asp:Parameter Name="BetCompletion" Type="Int32" />
+                <asp:Parameter Name="GameId" Type="Int32" />
+                <asp:Parameter Name="BetAmount" Type="Int32" />
+                <asp:Parameter Name="BetTeam" Type="Int32" />
+                <asp:Parameter Name="UserId" Type="Int32" />
+            </InsertParameters>
+            <UpdateParameters>
+                <asp:Parameter Name="BetDate" Type="DateTime" />
+                <asp:Parameter Name="BetCompletion" Type="Int32" />
+                <asp:Parameter Name="GameId" Type="Int32" />
+                <asp:Parameter Name="BetAmount" Type="Int32" />
+                <asp:Parameter Name="BetTeam" Type="Int32" />
+                <asp:Parameter Name="UserId" Type="Int32" />
+                <asp:Parameter Name="Original_BetId" Type="Int32" />
+            </UpdateParameters>
+        </asp:ObjectDataSource>
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
 
     </div>
 </asp:Content>

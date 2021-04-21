@@ -23,13 +23,5 @@ Partial Class Admin
     End Sub
     Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
-        cn.Open()
-
-        Dim cmd As New Data.SqlClient.SqlCommand(("UPDATE Users SET Roleid = '" & DropDownList2.SelectedIndex & "' WHERE Username = '" & DropDownList2.SelectedValue & "')"), cn)
-        cmd.ExecuteNonQuery()
-        cn.Close()
-
-        lblupdate.Text = "User Updated"
-
     End Sub
 End Class

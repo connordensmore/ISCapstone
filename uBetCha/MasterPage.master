@@ -21,7 +21,7 @@
                 <a href="/Default.aspx">Home</a>
                 <a href="/Teams.aspx">Teams</a>
                 <a href="/upcoming-games.aspx">Upcoming Games</a>
-                <a href="/betting.aspx">Betting</a>
+                <a href="/MemberPages/betting.aspx">Betting</a>
                 <a href="/how-to-bet.aspx">How To Bet</a>
                 <a href="/MemberPages/MyAccount.aspx">MyAccount</a>
    		    </nav>
