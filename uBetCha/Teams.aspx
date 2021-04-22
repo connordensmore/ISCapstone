@@ -6,6 +6,10 @@
     <div class="title"><h1>Teams</h1></div>
 
     <div class="container">
+
+        <br />
+
+        <p class="textcenter">The NBA began life as the Basketball Association of America in 1946 and played under that monkier for 3 years before, in 1949, merging with the National Basketball League and changing names to the NBA. The BAA started out with 11 teams in 1946 but lost four of them before the start of the next season. Now the NBA currently consist of 30 teams spanning all across North America. Below You can find a list of all 30 current teams and their previous two season records.</p>
         <div class="center">
 
             <br />

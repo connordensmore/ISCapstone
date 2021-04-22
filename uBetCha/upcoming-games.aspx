@@ -6,6 +6,8 @@
     <div class="title"><h1>Upcoming Games</h1></div>
 
     <div class="container">
+        <br />
+        <p class="textcenter">Below you can find a list of all the currently schedule upcoming games that you will be able to place bets on (Upon registering your very own account and logging in).</p>
 
         <br />
 

@@ -6,11 +6,10 @@ Partial Class Betting
     Dim cn As New Data.SqlClient.SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database.mdf;Integrated Security=True")
 
     Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        lbldate.Text = DateTime.Now.ToString("d")
 
         cn.Open()
 
-        Dim cmd As New Data.SqlClient.SqlCommand(("INSERT INTO Bet (BetDate, GameId, BetAmount, BetTeam, UserId) VALUES ('" & lbldate.Text & "', '" & lblgid.Text & "', '" & tbbetamount.Text & "', '" & rbteams.SelectedValue & "', '" & lbluserid.Text & "')"), cn)
+        Dim cmd As New Data.SqlClient.SqlCommand(("INSERT INTO Bet (BetDate, GameId, BetAmount, BetTeam, UserId) VALUES ('" & lbldate.Text & "', '" & lblgid.Text & "', '" & tbbetamount.Text & "', '" & rbteams.SelectedItem.Text & "', '" & lbluserid.Text & "')"), cn)
         cmd.ExecuteNonQuery()
         cn.Close()
 
@@ -28,7 +27,8 @@ Partial Class Betting
         rbteams.Items(1).Text = GridView1.SelectedRow.Cells(5).Text
 
 
-        tbbetamount.Focus()
+
+        Button1.Focus()
 
     End Sub
     Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
@@ -61,8 +61,24 @@ Partial Class Betting
 
         End If
 
+        lbldate.Text = DateTime.Now.ToString("d")
 
         lbluserid.Text = GridView2.Rows(0).Cells(0).Text
+
+        'rbteams.Items(0).Text = "Visitor Team"
+        'rbteams.Items(1).Text = "Home Team"
+
+    End Sub
+
+    Protected Sub btreview_Click(sender As Object, e As EventArgs) Handles btreview.Click
+
+        ListBox1.Visible = True
+
+        ListBox1.Items.Add("Game ID: " + lblgid.Text)
+        ListBox1.Items.Add("Bet placed on: " + rbteams.SelectedItem.Text)
+        ListBox1.Items.Add("Bet Amount: $" + tbbetamount.Text)
+
+        Button1.Visible = True
 
     End Sub
 End Class
