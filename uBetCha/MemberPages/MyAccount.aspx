@@ -11,6 +11,8 @@
         <asp:Label ID="lblmsg" runat="server"></asp:Label>
 
         <asp:Label ID="lblmsg2" runat="server"></asp:Label>
+        <asp:Label ID="lblwinner" runat="server"></asp:Label>
+        <asp:Label ID="lblbetamount" runat="server"></asp:Label>
         <br />
 
         &nbsp;<p>View Past Bets</p>
@@ -38,6 +40,31 @@
                     </SelectParameters>
                 </asp:ObjectDataSource>
             </p>
+        <p>
+            Pending Bet Claims</p>
+        <p>
+            <asp:GridView ID="GridView5" runat="server" AutoGenerateColumns="False" Width="1440px" CellPadding="5" CssClass="textcenter" Align="center" DataKeyNames="BetId" DataSourceID="ObjectDataSource4">
+                <Columns>
+                    <asp:CommandField ButtonType="Button" SelectText="Claim Bet" ShowSelectButton="True" />
+                    <asp:BoundField DataField="BetId" HeaderText="BetId" InsertVisible="False" ReadOnly="True" SortExpression="BetId" />
+                    <asp:BoundField DataField="BetDate" HeaderText="BetDate" SortExpression="BetDate" />
+                    <asp:BoundField DataField="GameId" HeaderText="GameId" SortExpression="GameId" />
+                    <asp:BoundField DataField="BetAmount" HeaderText="BetAmount" SortExpression="BetAmount" />
+                    <asp:BoundField DataField="BetTeam" HeaderText="BetTeam" SortExpression="BetTeam" />
+                    <asp:BoundField DataField="Date" HeaderText="Date" SortExpression="Date" />
+                    <asp:BoundField DataField="Visitor" HeaderText="Visitor" SortExpression="Visitor" />
+                    <asp:BoundField DataField="VPTS" HeaderText="VPTS" SortExpression="VPTS" />
+                    <asp:BoundField DataField="Home" HeaderText="Home" SortExpression="Home" />
+                    <asp:BoundField DataField="HPTS" HeaderText="HPTS" SortExpression="HPTS" />
+                    <asp:BoundField DataField="StartTime" HeaderText="StartTime" SortExpression="StartTime" />
+                </Columns>
+            </asp:GridView>
+            <asp:ObjectDataSource ID="ObjectDataSource4" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="GetData" TypeName="DataSetTableAdapters.PendingBetsTableAdapter">
+                <SelectParameters>
+                    <asp:ControlParameter ControlID="lbluserid" Name="UserId" PropertyName="Text" Type="Int32" />
+                </SelectParameters>
+            </asp:ObjectDataSource>
+            </p>
 
 
         <p>View Upcoming Bets</p>
@@ -48,9 +75,6 @@
         <asp:GridView ID="GridView4" runat="server" AutoGenerateColumns="False" Width="1440px" CellPadding="5" CssClass="textcenter" Align="center" DataKeyNames="BetId" DataSourceID="ObjectDataSource3">
             <Columns>
                 <asp:BoundField DataField="BetId" HeaderText="BetId" InsertVisible="False" ReadOnly="True" SortExpression="BetId" />
-                <asp:BoundField DataField="UserId" SortExpression="UserId" >
-                <ItemStyle Font-Size="XX-Small" ForeColor="White" Width="1px" />
-                </asp:BoundField>
                 <asp:BoundField DataField="Date" HeaderText="Date" SortExpression="Date" DataFormatString="{0:d}" />
                 <asp:BoundField DataField="StartTime" HeaderText="StartTime" SortExpression="StartTime" />
                 <asp:BoundField DataField="Visitor" HeaderText="Visitor" SortExpression="Visitor" />

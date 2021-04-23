@@ -53,12 +53,13 @@ Partial Class Register
         Using mm As New MailMessage("ubetcha2021ksu@gmail.com", tbemail.Text)
             mm.Subject = "UBetCha Account Activation"
             Dim body As String = "Hello " + tbusername.Text.Trim() + ","
-            body += "<br /><br />Thank you for registering at UBetCha."
-            body += "Go get betting!."
-            body += "<br />Please click the link below to activate your account."
+            body += "<br /><br />Thank you for registering at UBetCha!"
+            body += "<br />To start off your betting journey we give you 500 BetChaBucks for registering!"
+            body += "<br />You can check your account balance once you login and vist 'My Account'"
+            body += "<br /><br />Please click the link below to activate your account."
             body += "<br />For security purposes the link will expire in 24 hours."
             body += "<br /><br />Thank you and welcome!"
-            body += "<br />-UBetCha"
+            body += "<br />- UBetCha"
             body += "<br /><br /><a href = '" + Request.Url.GetLeftPart(UriPartial.Authority) + Page.ResolveUrl("~/Activation.aspx?ActivationCode=" & activationCode) + "'> Click here to activate your account!"
             mm.Body = body
             mm.IsBodyHtml = True
