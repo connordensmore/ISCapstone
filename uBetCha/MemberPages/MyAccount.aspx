@@ -15,7 +15,11 @@
         <asp:Label ID="lblbetamount" runat="server"></asp:Label>
         <br />
 
-        &nbsp;<p>View Past Bets</p>
+        <p>
+            <asp:Label ID="lblwinlose" runat="server"></asp:Label>
+        </p>
+
+        <p>View Past Bets</p>
             <p>
         <asp:GridView ID="GridView3" runat="server" AutoGenerateColumns="False" Width="1440px" CellPadding="5" CssClass="textcenter" Align="center" DataSourceID="ObjectDataSource2" DataKeyNames="BetId">
             <Columns>

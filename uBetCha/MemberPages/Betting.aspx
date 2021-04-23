@@ -70,14 +70,17 @@
         <p class="textleft">
             Bet Amount
             <asp:TextBox ID="tbbetamount" runat="server"></asp:TextBox>
-        &nbsp;*Please enter a whole number with no symbols.</p>
+            &nbsp;Your current balance: $<asp:Label ID="lblbetchabucks" runat="server"></asp:Label>
+        &nbsp;BetChaBucks.</p>
             <p>Who will win the game?</p>
             <asp:RadioButtonList ID="rbteams" runat="server" Font-Bold="True">
-                <asp:ListItem id="option1" Value="0"></asp:ListItem>
-                <asp:ListItem id="option2" Value="1"></asp:ListItem>
+                <asp:ListItem id="option1"></asp:ListItem>
+                <asp:ListItem id="option2"></asp:ListItem>
             </asp:RadioButtonList>
         <p class="textleft">
             <asp:Label ID="lblmsg" runat="server" Font-Bold="True" ForeColor="Lime"></asp:Label>
+            <asp:Label ID="lblmsg2" runat="server" Font-Bold="True" ForeColor="Red"></asp:Label>
+            <asp:Label ID="lblmsg3" runat="server" Font-Bold="True" ForeColor="Red"></asp:Label>
         </p>
         <p class="textleft">
 &nbsp;<asp:Button ID="btreview" runat="server" CssClass="auto-style1" Text="Review Bet" Width="192px" />
@@ -90,23 +93,20 @@
             <asp:Button ID="Button1" runat="server" Text="Place Bet!" CssClass="button" Visible="False" />
         </p>
         <p class="textleft">
-            <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataKeyNames="UserId" DataSourceID="ObjectDataSource3" SelectedIndex="1" Visible="False">
+            <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataKeyNames="UserId" DataSourceID="ObjectDataSource3" SelectedIndex="1" Visible="False" ShowHeaderWhenEmpty="True">
                 <Columns>
                     <asp:BoundField DataField="UserId" HeaderText="UserId" InsertVisible="False" ReadOnly="True" SortExpression="UserId" />
                     <asp:BoundField DataField="Username" HeaderText="Username" SortExpression="Username" />
+                    <asp:BoundField DataField="BetChaBucks" HeaderText="BetChaBucks" SortExpression="BetChaBucks" />
                 </Columns>
             </asp:GridView>
-            <asp:ObjectDataSource ID="ObjectDataSource3" runat="server" DeleteMethod="Delete" OldValuesParameterFormatString="original_{0}" SelectMethod="GetDataGetUserId" TypeName="DataSetTableAdapters.GetUserIdTableAdapter" UpdateMethod="Update">
+            <asp:ObjectDataSource ID="ObjectDataSource3" runat="server" DeleteMethod="Delete" OldValuesParameterFormatString="original_{0}" SelectMethod="GetDataGetUserId" TypeName="DataSetTableAdapters.GetUserIdTableAdapter">
                 <DeleteParameters>
                     <asp:Parameter Name="Original_UserId" Type="Int32" />
                 </DeleteParameters>
                 <SelectParameters>
                     <asp:ControlParameter ControlID="lblusername" Name="Username" PropertyName="Text" Type="String" />
                 </SelectParameters>
-                <UpdateParameters>
-                    <asp:Parameter Name="Username" Type="String" />
-                    <asp:Parameter Name="Original_UserId" Type="Int32" />
-                </UpdateParameters>
             </asp:ObjectDataSource>
         </p>
         <p class="textleft">

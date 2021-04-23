@@ -5,30 +5,61 @@ Partial Class Betting
 
     Dim cn As New Data.SqlClient.SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database.mdf;Integrated Security=True")
 
+    Dim BetChaBucks As String
+
     Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
         cn.Open()
 
         Dim cmd As New Data.SqlClient.SqlCommand(("INSERT INTO Bet (BetDate, GameId, BetAmount, BetTeam, UserId) VALUES ('" & lbldate.Text & "', '" & lblgid.Text & "', '" & tbbetamount.Text & "', '" & rbteams.SelectedItem.Text & "', '" & lbluserid.Text & "')"), cn)
         cmd.ExecuteNonQuery()
+
         cn.Close()
 
-        lblmsg.Text = "Your bet has been placed! Check your account page to see your bets!"
+        cn.Open()
+
+        Dim cmd2 As New Data.SqlClient.SqlCommand(("UPDATE Users SET BetChaBucks = BetChaBucks -" & tbbetamount.Text & " WHERE UserId =" & lbluserid.Text & ""), cn)
+        cmd2.ExecuteNonQuery()
+        cn.Close()
+
+        lblmsg.Text = "Your bet has been placed! $" & tbbetamount.Text & " has been subtracted from your account. Check your account page to see your bets!"
 
         lblgid.Text = ""
         tbbetamount.Text = ""
-        rbteams.SelectedIndex = -1
+        rbteams.Visible = False
+        ListBox1.Visible = False
+        Button1.Visible = False
+
+        GridView2.DataBind()
+        BetChaBucks = GridView2.Rows(0).Cells(2).Text
+        lblbetchabucks.Text = BetChaBucks
+
     End Sub
     Protected Sub GridView1_SelectedIndexChanged(ByVal sender As Object, ByVal e As EventArgs) Handles GridView1.SelectedIndexChanged
 
-        lblgid.Text = GridView1.SelectedRow.Cells(1).Text
+        Dim GameDate As String = GridView1.SelectedRow.Cells(2).Text
+        Dim VTeam As String = GridView1.SelectedRow.Cells(4).Text
+        Dim HTeam As String = GridView1.SelectedRow.Cells(5).Text
 
-        rbteams.Items(0).Text = GridView1.SelectedRow.Cells(4).Text
-        rbteams.Items(1).Text = GridView1.SelectedRow.Cells(5).Text
+        If GameDate < DateTime.Now Then
+            lblmsg3.Text = "This game has already passed! You cannot bet on this game!"
+            lblmsg3.Focus()
 
+        Else
+            lblmsg.Text = ""
+            lblmsg2.Text = ""
+            lblmsg3.Text = ""
 
+            rbteams.Visible = True
 
-        Button1.Focus()
+            lblgid.Text = GridView1.SelectedRow.Cells(1).Text
+
+            rbteams.Items(0).Text = GridView1.SelectedRow.Cells(4).Text
+            rbteams.Items(1).Text = GridView1.SelectedRow.Cells(5).Text
+
+            Button1.Focus()
+
+        End If
 
     End Sub
     Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
@@ -44,41 +75,50 @@ Partial Class Betting
 
             lblusername.Text = Context.User.Identity.Name
 
-
-            'Dim myname As String = lblusername.Text
-
-            'Dim str As String = "Select * from Users WHERE Username = 'Context.User.Identity.Name'"
-            'Dim cmd As New Data.SqlClient.SqlCommand(str, cn)
-            'cmd.Connection = cn
-            'cn.Open()
-            'Dim dr As Data.SqlClient.SqlDataReader = cmd.ExecuteReader()
-
-            'While (dr.Read())
-            'lbluserid.Text = dr("UserId").ToString()
-            'End While
-            'dr.Close()
-            'cn.Close()
-
         End If
 
         lbldate.Text = DateTime.Now.ToString("d")
-
         lbluserid.Text = GridView2.Rows(0).Cells(0).Text
 
-        'rbteams.Items(0).Text = "Visitor Team"
-        'rbteams.Items(1).Text = "Home Team"
+        rbteams.Visible = False
+
+        BetChaBucks = GridView2.Rows(0).Cells(2).Text
+        lblbetchabucks.Text = BetChaBucks
 
     End Sub
 
     Protected Sub btreview_Click(sender As Object, e As EventArgs) Handles btreview.Click
 
-        ListBox1.Visible = True
+        lblmsg.Text = ""
+        lblmsg2.Text = ""
+        ListBox1.Items.Clear()
+        lblbetchabucks.Text = GridView2.Rows(0).Cells(2).Text
+        rbteams.Visible = True
 
-        ListBox1.Items.Add("Game ID: " + lblgid.Text)
-        ListBox1.Items.Add("Bet placed on: " + rbteams.SelectedItem.Text)
-        ListBox1.Items.Add("Bet Amount: $" + tbbetamount.Text)
+        Dim GameDate As String = GridView1.SelectedRow.Cells(2).Text
+        Dim VTeam As String = GridView1.SelectedRow.Cells(4).Text
+        Dim HTeam As String = GridView1.SelectedRow.Cells(5).Text
 
-        Button1.Visible = True
+        If BetChaBucks < tbbetamount.Text Then
+            lblmsg2.Text = "You do not have enough money! You currently have: $" + BetChaBucks + " BetChaBucks!!!"
+
+        Else
+
+            ListBox1.Visible = True
+
+            ListBox1.Items.Add("Game ID: " + lblgid.Text)
+            ListBox1.Items.Add("Date of Game: " + GameDate)
+            ListBox1.Items.Add("Visitor Team: " + VTeam)
+            ListBox1.Items.Add("Home Team: " + HTeam)
+            ListBox1.Items.Add("-------")
+            ListBox1.Items.Add("Bet placed on: " + rbteams.SelectedItem.Text)
+            ListBox1.Items.Add("Bet Amount: $" + tbbetamount.Text)
+
+            Button1.Visible = True
+
+            Button1.Focus()
+
+        End If
 
     End Sub
 End Class

@@ -59,16 +59,17 @@ Partial Class MyAccount
 
             cn.Open()
 
-            Dim cmd2 As New Data.SqlClient.SqlCommand(("UPDATE Users SET BetChaBucks = BetChaBucks +" & BetAmount & " WHERE UserId =" & lbluserid.Text & ""), cn)
+            Dim cmd2 As New Data.SqlClient.SqlCommand(("UPDATE Users SET BetChaBucks = BetChaBucks +" & (BetAmount * 2) & " WHERE UserId =" & lbluserid.Text & ""), cn)
             cmd2.ExecuteNonQuery()
             cn.Close()
 
-        Else
-            cn.Open()
+            lblwinlose.ForeColor = Drawing.Color.LimeGreen
+            lblwinlose.Text = "Congratulations! Your bet was right. Youve doubled your money! $" + (BetAmount * 2).ToString + " has been added to your account!"
 
-            Dim cmd3 As New Data.SqlClient.SqlCommand(("UPDATE Users SET BetChaBucks = BetChaBucks -" & BetAmount & " WHERE UserId =" & lbluserid.Text & ""), cn)
-            cmd3.ExecuteNonQuery()
-            cn.Close()
+        Else
+
+            lblwinlose.ForeColor = Drawing.Color.Red
+            lblwinlose.Text = "Sorry! Your bet was not correct! Better luck next time.  Amount lost: $" + BetAmount.ToString
 
         End If
 
