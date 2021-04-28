@@ -41,9 +41,9 @@ Partial Class MyAccount
         Dim Visitor As String = GridView5.SelectedRow.Cells(7).Text
         Dim Home As String = GridView5.SelectedRow.Cells(9).Text
 
-        Dim BetTeam As String = GridView5.SelectedRow.Cells(5).Text
+        Dim BetTeam As String = GridView5.SelectedRow.Cells(4).Text
 
-        Dim BetAmount As Integer = GridView5.SelectedRow.Cells(4).Text
+        Dim BetAmount As Integer = GridView5.SelectedRow.Cells(3).Text
 
         Dim Winner As String
 
@@ -63,10 +63,22 @@ Partial Class MyAccount
             cmd2.ExecuteNonQuery()
             cn.Close()
 
+            cn.Open()
+
+            Dim cmd3 As New Data.SqlClient.SqlCommand(("UPDATE Bet SET WinLoseAmount = " & (BetAmount * 2) & " WHERE BetId =" & BetId & ""), cn)
+            cmd3.ExecuteNonQuery()
+            cn.Close()
+
             lblwinlose.ForeColor = Drawing.Color.LimeGreen
             lblwinlose.Text = "Congratulations! Your bet was right. Youve doubled your money! $" + (BetAmount * 2).ToString + " has been added to your account!"
 
         Else
+
+            cn.Open()
+
+            Dim cmd4 As New Data.SqlClient.SqlCommand(("UPDATE Bet SET WinLoseAmount = - " & BetAmount & " WHERE BetId =" & BetId & ""), cn)
+            cmd4.ExecuteNonQuery()
+            cn.Close()
 
             lblwinlose.ForeColor = Drawing.Color.Red
             lblwinlose.Text = "Sorry! Your bet was not correct! Better luck next time.  Amount lost: $" + BetAmount.ToString

@@ -8,11 +8,17 @@
 
 
 
+        <h2 class="textcenter">
+
+
+
         <asp:Label ID="lblmsg" runat="server"></asp:Label>
 
         <asp:Label ID="lblmsg2" runat="server"></asp:Label>
-        <asp:Label ID="lblwinner" runat="server"></asp:Label>
         <asp:Label ID="lblbetamount" runat="server"></asp:Label>
+        </h2>
+        <p class="textcenter">
+            Below you can review all your past, present and future bets you have made! Your winnings and losses can be seen in the table of &quot;Past Bets&quot;</p>
         <br />
 
         <p>
@@ -23,19 +29,17 @@
             <p>
         <asp:GridView ID="GridView3" runat="server" AutoGenerateColumns="False" Width="1440px" CellPadding="5" CssClass="textcenter" Align="center" DataSourceID="ObjectDataSource2" DataKeyNames="BetId">
             <Columns>
-                <asp:BoundField DataField="BetId" HeaderText="BetId" InsertVisible="False" ReadOnly="True" SortExpression="BetId" />
-                <asp:BoundField DataField="UserId" SortExpression="UserId" >
-                <ItemStyle Font-Size="XX-Small" ForeColor="White" Width="0px" />
-                </asp:BoundField>
-                <asp:BoundField DataField="BetDate" HeaderText="BetDate" SortExpression="BetDate" DataFormatString="{0:d}" />
-                <asp:BoundField DataField="GameId" HeaderText="GameId" SortExpression="GameId" />
-                <asp:BoundField DataField="BetAmount" HeaderText="BetAmount" SortExpression="BetAmount" />
-                <asp:BoundField DataField="Visitor" HeaderText="Visitor" SortExpression="Visitor" />
-                <asp:BoundField DataField="Home" HeaderText="Home" SortExpression="Home" />
-                <asp:BoundField DataField="VPTS" HeaderText="VPTS" SortExpression="VPTS" />
-                <asp:BoundField DataField="HPTS" HeaderText="HPTS" SortExpression="HPTS" />
+                <asp:BoundField DataField="BetId" HeaderText="Bet ID" InsertVisible="False" ReadOnly="True" SortExpression="BetId" />
+                <asp:BoundField DataField="BetDate" HeaderText="Date of Bet" SortExpression="BetDate" DataFormatString="{0:d}" />
+                <asp:BoundField DataField="BetAmount" HeaderText="Ammount Bet" SortExpression="BetAmount" />
+                <asp:BoundField DataField="BetTeam" HeaderText="Team Bet On" SortExpression="BetTeam" />
+                <asp:BoundField DataField="GameId" HeaderText="Game ID" SortExpression="GameId" />
                 <asp:BoundField DataField="Date" HeaderText="Date of Game" SortExpression="Date" DataFormatString="{0:d}" />
-                <asp:BoundField DataField="BetTeam" HeaderText="Bet Team" SortExpression="BetTeam" />
+                <asp:BoundField DataField="Visitor" HeaderText="Visitor Team" SortExpression="Visitor" />
+                <asp:BoundField DataField="VPTS" HeaderText="Visitor Points" SortExpression="VPTS" />
+                <asp:BoundField DataField="Home" HeaderText="Home Team" SortExpression="Home" />
+                <asp:BoundField DataField="HPTS" HeaderText="Home Points" SortExpression="HPTS" />
+                <asp:BoundField DataField="WinLoseAmount" HeaderText="Win / Loss Amount" SortExpression="WinLoseAmount" />
             </Columns>
                 </asp:GridView>
                 <asp:ObjectDataSource ID="ObjectDataSource2" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="GetDataPastBets" TypeName="DataSetTableAdapters.Past_BetsTableAdapter">
@@ -50,17 +54,16 @@
             <asp:GridView ID="GridView5" runat="server" AutoGenerateColumns="False" Width="1440px" CellPadding="5" CssClass="textcenter" Align="center" DataKeyNames="BetId" DataSourceID="ObjectDataSource4">
                 <Columns>
                     <asp:CommandField ButtonType="Button" SelectText="Claim Bet" ShowSelectButton="True" />
-                    <asp:BoundField DataField="BetId" HeaderText="BetId" InsertVisible="False" ReadOnly="True" SortExpression="BetId" />
-                    <asp:BoundField DataField="BetDate" HeaderText="BetDate" SortExpression="BetDate" />
-                    <asp:BoundField DataField="GameId" HeaderText="GameId" SortExpression="GameId" />
-                    <asp:BoundField DataField="BetAmount" HeaderText="BetAmount" SortExpression="BetAmount" />
-                    <asp:BoundField DataField="BetTeam" HeaderText="BetTeam" SortExpression="BetTeam" />
-                    <asp:BoundField DataField="Date" HeaderText="Date" SortExpression="Date" />
-                    <asp:BoundField DataField="Visitor" HeaderText="Visitor" SortExpression="Visitor" />
-                    <asp:BoundField DataField="VPTS" HeaderText="VPTS" SortExpression="VPTS" />
-                    <asp:BoundField DataField="Home" HeaderText="Home" SortExpression="Home" />
-                    <asp:BoundField DataField="HPTS" HeaderText="HPTS" SortExpression="HPTS" />
-                    <asp:BoundField DataField="StartTime" HeaderText="StartTime" SortExpression="StartTime" />
+                    <asp:BoundField DataField="BetId" HeaderText="Bet ID" InsertVisible="False" ReadOnly="True" SortExpression="BetId" />
+                    <asp:BoundField DataField="BetDate" HeaderText="Date of Bet" SortExpression="BetDate" DataFormatString="{0:d}" />
+                    <asp:BoundField DataField="BetAmount" HeaderText="Ammount Bet" SortExpression="BetAmount" />
+                    <asp:BoundField DataField="BetTeam" HeaderText="Team Bet On" SortExpression="BetTeam" />
+                    <asp:BoundField DataField="GameId" HeaderText="Game ID" SortExpression="GameId" />
+                    <asp:BoundField DataField="Date" HeaderText="Date of Game" SortExpression="Date" DataFormatString="{0:d}" />
+                    <asp:BoundField DataField="Visitor" HeaderText="Visitor Team" SortExpression="Visitor" />
+                    <asp:BoundField DataField="VPTS" HeaderText="Visitor Points" SortExpression="VPTS" />
+                    <asp:BoundField DataField="Home" HeaderText="Home Team" SortExpression="Home" />
+                    <asp:BoundField DataField="HPTS" HeaderText="Home Points" SortExpression="HPTS" />
                 </Columns>
             </asp:GridView>
             <asp:ObjectDataSource ID="ObjectDataSource4" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="GetData" TypeName="DataSetTableAdapters.PendingBetsTableAdapter">
@@ -78,14 +81,13 @@
 
         <asp:GridView ID="GridView4" runat="server" AutoGenerateColumns="False" Width="1440px" CellPadding="5" CssClass="textcenter" Align="center" DataKeyNames="BetId" DataSourceID="ObjectDataSource3">
             <Columns>
-                <asp:BoundField DataField="BetId" HeaderText="BetId" InsertVisible="False" ReadOnly="True" SortExpression="BetId" />
-                <asp:BoundField DataField="Date" HeaderText="Date" SortExpression="Date" DataFormatString="{0:d}" />
-                <asp:BoundField DataField="StartTime" HeaderText="StartTime" SortExpression="StartTime" />
-                <asp:BoundField DataField="Visitor" HeaderText="Visitor" SortExpression="Visitor" />
-                <asp:BoundField DataField="Home" HeaderText="Home" SortExpression="Home" />
-                <asp:BoundField DataField="BetAmount" HeaderText="BetAmount" SortExpression="BetAmount" />
-                <asp:BoundField DataField="BetDate" HeaderText="BetDate" SortExpression="BetDate" DataFormatString="{0:d}" />
-                <asp:BoundField DataField="BetTeam" HeaderText="BetTeam" SortExpression="BetTeam" />
+                <asp:BoundField DataField="BetId" HeaderText="Bet Id" InsertVisible="False" ReadOnly="True" SortExpression="BetId" />
+                <asp:BoundField DataField="BetDate" HeaderText="Date of Bet" SortExpression="BetDate" DataFormatString="{0:d}" />
+                <asp:BoundField DataField="BetAmount" HeaderText="Ammount Bet" SortExpression="BetAmount" />
+                <asp:BoundField DataField="BetTeam" HeaderText="Team Bet On" SortExpression="BetTeam" />
+                <asp:BoundField DataField="Date" HeaderText="Date of Game" SortExpression="Date" DataFormatString="{0:d}" />
+                <asp:BoundField DataField="Visitor" HeaderText="Visitor Team" SortExpression="Visitor" />
+                <asp:BoundField DataField="Home" HeaderText="Home Team" SortExpression="Home" />
             </Columns>
         </asp:GridView>
         

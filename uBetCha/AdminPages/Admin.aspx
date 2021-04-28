@@ -51,36 +51,12 @@
         <p>Bet Completition: 0 = Not Completed; 1 = Completed</p>
 
         <rsweb:ReportViewer ID="ReportViewer1" runat="server" Font-Names="Verdana" Font-Size="8pt" Height="517px" WaitMessageFont-Names="Verdana" WaitMessageFont-Size="14pt" Width="1298px">
-            <LocalReport ReportPath="AdminPages\BettingReport.rdlc">
+            <LocalReport ReportPath="AdminPages\Report1.rdlc">
                 <DataSources>
                     <rsweb:ReportDataSource DataSourceId="ObjectDataSource1" Name="DataSet1" />
                 </DataSources>
             </LocalReport>
         </rsweb:ReportViewer>
-        <br />
-        <br />
-        <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" DeleteMethod="Delete" InsertMethod="Insert" OldValuesParameterFormatString="original_{0}" SelectMethod="GetDataBets" TypeName="DataSetTableAdapters.ReportBetTableAdapter" UpdateMethod="Update">
-            <DeleteParameters>
-                <asp:Parameter Name="Original_BetId" Type="Int32" />
-            </DeleteParameters>
-            <InsertParameters>
-                <asp:Parameter Name="BetDate" Type="DateTime" />
-                <asp:Parameter Name="BetCompletion" Type="Int32" />
-                <asp:Parameter Name="GameId" Type="Int32" />
-                <asp:Parameter Name="BetAmount" Type="Int32" />
-                <asp:Parameter Name="BetTeam" Type="Int32" />
-                <asp:Parameter Name="UserId" Type="Int32" />
-            </InsertParameters>
-            <UpdateParameters>
-                <asp:Parameter Name="BetDate" Type="DateTime" />
-                <asp:Parameter Name="BetCompletion" Type="Int32" />
-                <asp:Parameter Name="GameId" Type="Int32" />
-                <asp:Parameter Name="BetAmount" Type="Int32" />
-                <asp:Parameter Name="BetTeam" Type="Int32" />
-                <asp:Parameter Name="UserId" Type="Int32" />
-                <asp:Parameter Name="Original_BetId" Type="Int32" />
-            </UpdateParameters>
-        </asp:ObjectDataSource>
         <asp:ScriptManager ID="ScriptManager1" runat="server">
         </asp:ScriptManager>
 

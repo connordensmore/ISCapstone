@@ -5,8 +5,7 @@ Partial Class Betting
 
     Dim cn As New Data.SqlClient.SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database.mdf;Integrated Security=True")
 
-    Dim BetChaBucks As String
-
+    Dim BetChaBucks As Integer
     Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
         cn.Open()
@@ -29,6 +28,8 @@ Partial Class Betting
         rbteams.Visible = False
         ListBox1.Visible = False
         Button1.Visible = False
+        btreview.Visible = False
+        rbteams.SelectedIndex = -1
 
         GridView2.DataBind()
         BetChaBucks = GridView2.Rows(0).Cells(2).Text
@@ -51,6 +52,7 @@ Partial Class Betting
             lblmsg3.Text = ""
 
             rbteams.Visible = True
+            btreview.Visible = True
 
             lblgid.Text = GridView1.SelectedRow.Cells(1).Text
 
@@ -80,6 +82,7 @@ Partial Class Betting
         lbldate.Text = DateTime.Now.ToString("d")
         lbluserid.Text = GridView2.Rows(0).Cells(0).Text
 
+        btreview.Visible = False
         rbteams.Visible = False
 
         BetChaBucks = GridView2.Rows(0).Cells(2).Text
@@ -94,13 +97,17 @@ Partial Class Betting
         ListBox1.Items.Clear()
         lblbetchabucks.Text = GridView2.Rows(0).Cells(2).Text
         rbteams.Visible = True
+        btreview.Visible = True
 
         Dim GameDate As String = GridView1.SelectedRow.Cells(2).Text
         Dim VTeam As String = GridView1.SelectedRow.Cells(4).Text
         Dim HTeam As String = GridView1.SelectedRow.Cells(5).Text
 
-        If BetChaBucks < tbbetamount.Text Then
-            lblmsg2.Text = "You do not have enough money! You currently have: $" + BetChaBucks + " BetChaBucks!!!"
+        Dim BetAmount As Integer = Convert.ToInt32(tbbetamount.Text)
+
+        If BetChaBucks < BetAmount Then
+            lblmsg2.Text = "You do not have enough money! You currently have: $" + BetChaBucks.ToString + " BetChaBucks!!!"
+            ListBox1.Visible = False
 
         Else
 
@@ -119,6 +126,19 @@ Partial Class Betting
             Button1.Focus()
 
         End If
+
+    End Sub
+    Protected Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+
+        lblgid.Text = ""
+        tbbetamount.Text = ""
+        rbteams.SelectedIndex = -1
+        rbteams.Visible = False
+        ListBox1.Visible = False
+        Button1.Visible = False
+        lblmsg.Text = ""
+        lblmsg2.Text = ""
+        lblmsg3.Text = ""
 
     End Sub
 End Class

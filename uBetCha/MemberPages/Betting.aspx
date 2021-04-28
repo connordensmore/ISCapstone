@@ -74,9 +74,10 @@
         &nbsp;BetChaBucks.</p>
             <p>Who will win the game?</p>
             <asp:RadioButtonList ID="rbteams" runat="server" Font-Bold="True">
-                <asp:ListItem id="option1"></asp:ListItem>
-                <asp:ListItem id="option2"></asp:ListItem>
+                <asp:ListItem></asp:ListItem>
+                <asp:ListItem></asp:ListItem>
             </asp:RadioButtonList>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="rbteams" ErrorMessage="You must select a team to bet on first!" Font-Bold="True" ForeColor="Red"></asp:RequiredFieldValidator>
         <p class="textleft">
             <asp:Label ID="lblmsg" runat="server" Font-Bold="True" ForeColor="Lime"></asp:Label>
             <asp:Label ID="lblmsg2" runat="server" Font-Bold="True" ForeColor="Red"></asp:Label>
@@ -84,7 +85,7 @@
         </p>
         <p class="textleft">
 &nbsp;<asp:Button ID="btreview" runat="server" CssClass="auto-style1" Text="Review Bet" Width="192px" />
-&nbsp;<asp:Button ID="Button2" runat="server" Text="Clear Bet" CssClass="auto-style1" Width="183px" />
+&nbsp;<asp:Button ID="Button2" runat="server" Text="Clear Bet" CssClass="auto-style1" Width="183px" CausesValidation="False" />
         </p>
         <p class="textleft">
             <asp:ListBox ID="ListBox1" runat="server" Height="113px" Visible="False" Width="315px"></asp:ListBox>
