@@ -23,8 +23,8 @@
                 <a href="/upcoming-games.aspx">Upcoming Games</a>
                 <a href="/past-games.aspx">Past Games</a>
                 <a href="/MemberPages/betting.aspx">Betting</a>
-                <a href="/how-to-bet.aspx">How To Bet</a>
-                <a href="/MemberPages/MyAccount.aspx">MyAccount</a>
+                <a href="/MemberPages/how-to-bet.aspx">How To Bet</a>
+                <a href="/MemberPages/MyAccount.aspx">My Account</a>
    		    </nav>
 		</div>
         </div>
@@ -34,7 +34,7 @@
 
         <div class="fixed-footer">
         <div class="container">
-          <p class="textcenter"><a href="/Default.aspx">Home</a> | <a href="/Teams.aspx">Teams</a> | <a href="/upcoming-games.aspx">Upcoming Games</a> | <a href="/betting.aspx">Betting</a> | <a href="/how-to-bet.aspx">How To Bet</a> | <a href="/MemberPages/MyAccount.aspx">My Account</a> | <a href="/AdminPages/Admin.aspx">Admin</a></p>
+          <p class="textcenter"><a href="/Default.aspx">Home</a> | <a href="/Teams.aspx">Teams</a> | <a href="/upcoming-games.aspx">Upcoming Games</a> | <a href="/MemberPages/betting.aspx">Betting</a> | <a href="/MemberPages/how-to-bet.aspx">How To Bet</a> | <a href="/MemberPages/MyAccount.aspx">My Account</a> | <a href="/AdminPages/Admin.aspx">Admin</a></p>
 		  <div class="textcenter" id="copyright">
               <pre>Copyright ©2021 uBetCha</pre>
             </div>

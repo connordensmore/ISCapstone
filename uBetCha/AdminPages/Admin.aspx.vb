@@ -13,7 +13,7 @@ Partial Class Admin
         End If
 
         If (Context.User.Identity.IsAuthenticated) Then
-            lblmsg.Text = "Hello " + Context.User.Identity.Name + " Welcome to the admin page of the website."
+            lblmsg.Text = "Hello " + Context.User.Identity.Name + ". Welcome to the admin page of the website."
 
         Else
             Response.Redirect("~/Default.aspx")

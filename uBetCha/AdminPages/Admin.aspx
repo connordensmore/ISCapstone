@@ -3,6 +3,11 @@
 <%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <style type="text/css">
+        .auto-style1 {
+            font-size: medium;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <div class="title"><h1>Admin Page</h1></div>
@@ -48,18 +53,73 @@
         &nbsp;<asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:UBetChaDB %>" SelectCommand="SELECT [Username] FROM [Users]"></asp:SqlDataSource>
         </p>
         <hr />
-        <p>Bet Completition: 0 = Not Completed; 1 = Completed</p>
+        <p>Completeed Bets:</p>
+        <p class="auto-style1">Win Lose Amount: Negative is collection. Postive is payout.</p>
 
-        <rsweb:ReportViewer ID="ReportViewer1" runat="server" Font-Names="Verdana" Font-Size="8pt" Height="517px" WaitMessageFont-Names="Verdana" WaitMessageFont-Size="14pt" Width="1298px">
-            <LocalReport ReportPath="AdminPages\Report1.rdlc">
+        <rsweb:ReportViewer ID="ReportViewer1" runat="server" Font-Names="Verdana" Font-Size="8pt" Height="517px" WaitMessageFont-Names="Verdana" WaitMessageFont-Size="14pt" Width="650px">
+            <LocalReport ReportPath="AdminPages\PastBets.rdlc">
                 <DataSources>
-                    <rsweb:ReportDataSource DataSourceId="ObjectDataSource1" Name="DataSet1" />
+                    <rsweb:ReportDataSource DataSourceId="ObjectDataSource1" Name="ReportPastBets" />
                 </DataSources>
             </LocalReport>
         </rsweb:ReportViewer>
+        <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" DeleteMethod="Delete" InsertMethod="Insert" OldValuesParameterFormatString="original_{0}" SelectMethod="GetDataReportPastBets" TypeName="DataSetTableAdapters.ReportPastBetsTableAdapter" UpdateMethod="Update">
+            <DeleteParameters>
+                <asp:Parameter Name="Original_BetId" Type="Int32" />
+            </DeleteParameters>
+            <InsertParameters>
+                <asp:Parameter Name="BetDate" Type="DateTime" />
+                <asp:Parameter Name="GameId" Type="Int32" />
+                <asp:Parameter Name="BetAmount" Type="Int32" />
+                <asp:Parameter Name="UserId" Type="Int32" />
+                <asp:Parameter Name="WinLoseAmount" Type="Int32" />
+            </InsertParameters>
+            <UpdateParameters>
+                <asp:Parameter Name="BetDate" Type="DateTime" />
+                <asp:Parameter Name="GameId" Type="Int32" />
+                <asp:Parameter Name="BetAmount" Type="Int32" />
+                <asp:Parameter Name="UserId" Type="Int32" />
+                <asp:Parameter Name="WinLoseAmount" Type="Int32" />
+                <asp:Parameter Name="Original_BetId" Type="Int32" />
+            </UpdateParameters>
+        </asp:ObjectDataSource>
         <asp:ScriptManager ID="ScriptManager1" runat="server">
         </asp:ScriptManager>
+        <br />
 
-    </div>
+        <p>Upcoming Bets:</p>
+        <p></p>
+
+        <rsweb:ReportViewer ID="ReportViewer2" runat="server" Font-Names="Verdana" Font-Size="8pt" Height="507px" WaitMessageFont-Names="Verdana" WaitMessageFont-Size="14pt" Width="655px">
+            <LocalReport ReportPath="AdminPages\Report1.rdlc">
+                <DataSources>
+                    <rsweb:ReportDataSource DataSourceId="ObjectDataSource2" Name="ReportsUpcomingBets" />
+                </DataSources>
+            </LocalReport>
+        </rsweb:ReportViewer>
+        <asp:ObjectDataSource ID="ObjectDataSource2" runat="server" DeleteMethod="Delete" InsertMethod="Insert" OldValuesParameterFormatString="original_{0}" SelectMethod="GetDataReportUpcomingBets" TypeName="DataSetTableAdapters.ReportUpcommingBetsTableAdapter" UpdateMethod="Update">
+            <DeleteParameters>
+                <asp:Parameter Name="Original_BetId" Type="Int32" />
+            </DeleteParameters>
+            <InsertParameters>
+                <asp:Parameter Name="BetDate" Type="DateTime" />
+                <asp:Parameter Name="GameId" Type="Int32" />
+                <asp:Parameter Name="BetAmount" Type="Int32" />
+                <asp:Parameter Name="UserId" Type="Int32" />
+                <asp:Parameter Name="WinLoseAmount" Type="Int32" />
+                <asp:Parameter Name="BetCompletion" Type="Int32" />
+            </InsertParameters>
+            <UpdateParameters>
+                <asp:Parameter Name="BetDate" Type="DateTime" />
+                <asp:Parameter Name="GameId" Type="Int32" />
+                <asp:Parameter Name="BetAmount" Type="Int32" />
+                <asp:Parameter Name="UserId" Type="Int32" />
+                <asp:Parameter Name="WinLoseAmount" Type="Int32" />
+                <asp:Parameter Name="BetCompletion" Type="Int32" />
+                <asp:Parameter Name="Original_BetId" Type="Int32" />
+            </UpdateParameters>
+        </asp:ObjectDataSource>
+        </div>
+    <br />
 </asp:Content>
 

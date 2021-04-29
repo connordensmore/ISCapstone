@@ -8,9 +8,8 @@
 			<div class="major">
 				<h2>uBetCha | Practice Your Bets</br>
 				Rated #1 Practice Betting Site</h2>
-				<p class="subtitle">Register Your Account Today!</br>
-				<a href="Register.aspx">Register</a></br></br>
-                <asp:Label ID="lblwelcome" runat="server" Text=""></asp:Label>&nbsp;</p>
+                <p class="subtitle">&nbsp;</p>
+                <p><asp:Label ID="lblwelcome" runat="server" Text=""></asp:Label>&nbsp;</p>
                 <p class="subtitle">&nbsp;</p>
                 <p class="subtitle">&nbsp;</p>
 
