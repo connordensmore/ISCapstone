@@ -34,6 +34,8 @@ Partial Class Register
                 Exit Select
         End Select
         ClientScript.RegisterStartupScript([GetType](), "alert", (Convert.ToString("alert( ' ") & messege) + " ');", True)
+
+        Response.Redirect("~/Default.aspx")
     End Sub
 
     Private Sub SendActivationEmail(userId As Integer)
@@ -54,7 +56,7 @@ Partial Class Register
             mm.Subject = "UBetCha Account Activation"
             Dim body As String = "Hello " + tbusername.Text.Trim() + ","
             body += "<br /><br />Thank you for registering at UBetCha!"
-            body += "<br />To start off your betting journey we give you 500 BetChaBucks for registering!"
+            body += "<br />To start off your betting journey we give you $500 BetChaBucks for registering!"
             body += "<br />You can check your account balance once you login and vist 'My Account'"
             body += "<br /><br />Please click the link below to activate your account."
             body += "<br />For security purposes the link will expire in 24 hours."
