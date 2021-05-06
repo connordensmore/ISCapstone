@@ -33,9 +33,10 @@ Partial Class Register
                 SendActivationEmail(userId)
                 Exit Select
         End Select
+        Response.Redirect("~/Default.aspx")
+
         ClientScript.RegisterStartupScript([GetType](), "alert", (Convert.ToString("alert( ' ") & messege) + " ');", True)
 
-        Response.Redirect("~/Default.aspx")
     End Sub
 
     Private Sub SendActivationEmail(userId As Integer)
